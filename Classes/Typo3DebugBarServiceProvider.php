@@ -17,6 +17,9 @@ class Typo3DebugBarServiceProvider
         );
     }
 
+    /**
+     * @throws \DebugBar\DebugBarException
+     */
     public function boot()
     {
         /** @var Typo3DebugBar $debugBar */
