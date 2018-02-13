@@ -1,4 +1,4 @@
-<?php namespace Ait\TYPO3DebugBar\DataCollectors;
+<?php namespace Konafets\TYPO3DebugBar\DataCollectors;
 
 use DebugBar\DataCollector\DataCollector;
 use DebugBar\DataCollector\Renderable;
@@ -8,7 +8,7 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 /**
  * Class BaseCollector
  *
- * @package Ait\TYPO3DebugBar\DataCollectors
+ * @package Konafets\TYPO3DebugBar\DataCollectors
  * @author Stefano Kowalke <info@arroba-it.de>
  */
 abstract class BaseCollector extends DataCollector implements Renderable

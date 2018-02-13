@@ -1,5 +1,5 @@
 {
-  "name": "ait/typo3_debugbar",
+  "name": "konafets/typo3_debugbar",
   "type": "typo3-cms-extension",
   "description": "Utilizes the PHP Debugbar to provide information of the system health to the frontend.",
   "authors": [
@@ -20,7 +20,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Ait\\TYPO3DebugBar\\": "Classes"
+      "Konafets\\TYPO3DebugBar\\": "Classes"
     }
   },
   "extra": {

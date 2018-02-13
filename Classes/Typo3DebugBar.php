@@ -1,10 +1,11 @@
-<?php namespace Ait\TYPO3DebugBar;
+<?php namespace Konafets\TYPO3DebugBar;
 
-use Ait\TYPO3DebugBar\DataCollectors\AuthCollector;
-use Ait\TYPO3DebugBar\DataCollectors\InfoCollector;
-use Ait\TYPO3DebugBar\DataCollectors\MySqliCollector;
-use Ait\TYPO3DebugBar\DataCollectors\SessionCollector;
-use Ait\TYPO3DebugBar\DataCollectors\Typo3Collector;
+use Konafets\TYPO3DebugBar\DataCollectors\AuthCollector;
+use Konafets\TYPO3DebugBar\DataCollectors\InfoCollector;
+use Konafets\TYPO3DebugBar\DataCollectors\MySqliCollector;
+use Konafets\TYPO3DebugBar\DataCollectors\SessionCollector;
+use Konafets\TYPO3DebugBar\DataCollectors\Typo3Collector;
+use Konafets\TYPO3DebugBar\DataCollectors\TypoScriptCollector;
 use DebugBar\DataCollector\ExceptionsCollector;
 use DebugBar\DataCollector\MemoryCollector;
 use DebugBar\DataCollector\MessagesCollector;

@@ -1,4 +1,4 @@
-<?php namespace Ait\TYPO3DebugBar;
+<?php namespace Konafets\TYPO3DebugBar;
 
 use Doctrine\DBAL\Logging\DebugStack;
 use TYPO3\CMS\Core\Database\ConnectionPool;
