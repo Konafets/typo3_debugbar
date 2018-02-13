@@ -241,9 +241,9 @@ class Typo3DebugBar extends DebugBar implements SingletonInterface
     public function isEnabled()
     {
         if ($this->enabled === null) {
-            $enabled = (bool) $this->extensionConfiguration['enabled']['value'];
+            $isEnabled = (bool) $this->extensionConfiguration['enabled']['value'];
 
-            $this->enabled = $this->isFrontendMode() && $enabled && $this->isAdminLoggedIn();
+            $this->enabled = $this->isFrontendMode() && $this->isAdminLoggedIn() && $isEnabled;
         }
 
         return $this->enabled;
@@ -257,6 +257,7 @@ class Typo3DebugBar extends DebugBar implements SingletonInterface
         if (!$this->isEnabled()) {
             return;
         }
+
         $this->javascriptRenderer->dumpCssAssets($this->cssAssets[0]);
         $this->javascriptRenderer->dumpJsAssets($this->jsAssets[0]);
 
