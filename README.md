@@ -37,10 +37,6 @@ Require this package with composer. It is recommended to only require the packag
 composer require konafets/typo3_debugbar --dev
 ```
 
-The profiler is enabled by default. You can override that in the config (`debugbar.enabled`) or by setting `DEBUGBAR_ENABLED` in your `.env`. See more options in `config/debugbar.php`
-You can also set in your config if you want to include/exclude the vendor files also (FontAwesome, Highlight.js and jQuery). If you already use them in your site, set it to false.
-You can also only display the js or css vendors, by setting it to 'js' or 'css'. (Highlight.js requires both css + js, so set to `true` for syntax highlighting)
-
 ## Usage
 
 TODO
