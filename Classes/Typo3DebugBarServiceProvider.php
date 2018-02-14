@@ -9,11 +9,11 @@ use TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController;
 class Typo3DebugBarServiceProvider
 {
 
-    public function register()
+    public function register(array $params)
     {
         GeneralUtility::setSingletonInstance(
             Typo3DebugBar::class,
-            GeneralUtility::makeInstance(Typo3DebugBar::class)
+            GeneralUtility::makeInstance(Typo3DebugBar::class, $params['BE_USER'])
         );
     }
 

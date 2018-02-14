@@ -15,6 +15,7 @@ use DebugBar\DebugBar;
 use DebugBar\DebugBarException;
 use DebugBar\JavascriptRenderer;
 use Exception;
+use TYPO3\CMS\Backend\FrontendBackendUserAuthentication;
 use TYPO3\CMS\Core\Page\PageRenderer;
 use TYPO3\CMS\Core\SingletonInterface;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
@@ -61,10 +62,13 @@ class Typo3DebugBar extends DebugBar implements SingletonInterface
     /** @var array */
     protected $jsAssets = [];
 
+    /** @var FrontendBackendUserAuthentication */
+    protected $backendUser;
+
     /**
-     * The constructor
+     * @param FrontendBackendUserAuthentication|null $backendUser
      */
-    public function __construct()
+    public function __construct(FrontendBackendUserAuthentication $backendUser = null)
     {
         $this->objectManager = GeneralUtility::makeInstance(ObjectManager::class);
         $this->extensionConfiguration = $this->objectManager
@@ -74,6 +78,7 @@ class Typo3DebugBar extends DebugBar implements SingletonInterface
 
         $this->pathToCssResourceFolder = $this->extensionPath . 'Resources/Public/Css/';
         $this->pathToJsResourceFolder = $this->extensionPath . 'Resources/Public/JavaScript/';
+        $this->backendUser = $backendUser;
     }
 
     /**
@@ -290,7 +295,7 @@ class Typo3DebugBar extends DebugBar implements SingletonInterface
      */
     private function getBackendUser()
     {
-        return $GLOBALS['BE_USER'];
+        return $this->backendUser;
     }
 
     private function setDefaultAssets()

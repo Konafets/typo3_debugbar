@@ -5,13 +5,13 @@ defined('TYPO3_MODE') or die('Access denied.');
 $extensionPath = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY);
 
 if (TYPO3_MODE === 'FE') {
-    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['tslib/index_ts.php']['preprocessRequest'][] =
-        $extensionPath . 'Classes/Typo3DebugBarServiceProvider.php:Konafets\\TYPO3DebugBar\\Typo3DebugBarServiceProvider->register';
-
     $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['tslib/class.tslib_fe.php']['connectToDB'][] =
         $extensionPath . 'Classes/Typo3DebugBarServiceProvider.php:Konafets\\TYPO3DebugBar\\Typo3DebugBarServiceProvider->injectDbalLoggerToDbConnection';
 
-    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_pagerenderer.php']['render-preProcess'][] =
+    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['tslib/index_ts.php']['postBeUser'][] =
+        $extensionPath . 'Classes/Typo3DebugBarServiceProvider.php:Konafets\\TYPO3DebugBar\\Typo3DebugBarServiceProvider->register';
+
+    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['tslib/index_ts.php']['postBeUser'][] =
         $extensionPath . 'Classes/Typo3DebugBarServiceProvider.php:Konafets\\TYPO3DebugBar\\Typo3DebugBarServiceProvider->boot';
 
     $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_pagerenderer.php']['render-preProcess'][] =

@@ -39,7 +39,7 @@ abstract class BaseCollector extends DataCollector implements Renderable
      */
     protected function getLanguageService()
     {
-        return $GLOBALS['LANG'];
+        return GeneralUtility::makeInstance(\TYPO3\CMS\Lang\LanguageService::class);
     }
 
     /**

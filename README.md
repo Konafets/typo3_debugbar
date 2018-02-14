@@ -49,6 +49,48 @@ The extension is configurable through the Extension Manager. There you can enabl
 
 ![Configuration](https://raw.githubusercontent.com/konafets/typo3_debugbar/develop/Documentation/Images/Configure.png)
 
+
+The Typo3DebugBar implements the `SingletonInterface`, therefore you can get the same instance via `GeneralUtility::makeInstance(Typo3DebugBar::class)`. This opens the possibility to interact with the the DebugBar from within TYPO3.
+
+### Log Exceptions
+
+```php
+try {
+    throw new Exception('foobar');
+} catch (Exception $e) {
+    $debugBar = GeneralUtility::makeInstance(Typo3DebugBar::class);
+    $debugBar->addThrowable($e);
+}
+```  
+
+These will be shown in the Exception pane.
+
+### Add messages
+
+```php
+$debugBar = GeneralUtility::makeInstance(Typo3DebugBar::class);
+
+$debugBar->info($object);
+$debugBar->error('Error!');
+$debugBar->warning('Watch out…');
+$debugBar->addMessage('Another message', 'mylabel');
+```
+
+### Add timers
+
+And start/stop timing:
+
+```php
+$debugBar = GeneralUtility::makeInstance(Typo3DebugBar::class);
+
+$debugBar->startMeasure('render', 'Time for rendering');
+$debugBar->stopMeasure('render');
+$debugBar->addMeasure('now', TYPO3_START, microtime(true));
+$debugBar->measure('My long operation', function() {
+    // Do something…
+});
+```
+
 ### Database
 
 This pane shows all issued queries of the *default* connection against the database. To see the values of a prepared statements, click on the statement. 
@@ -63,6 +105,6 @@ This is due to log *all* queries from the very beginning ... but at that point t
 
 As mentioned above the extension uses hooks. The following figure shows the usage during a request life cycle. 
 
-![DatabasePane](Documentation/Images/LifeCycle.svg)   
+![DatabasePane](https://raw.githubusercontent.com/konafets/typo3_debugbar/develop/Documentation/Images/LifeCycle.svg)   
 
 
