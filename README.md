@@ -50,7 +50,7 @@ The extension is configurable through the Extension Manager. There you can enabl
 ![Configuration](https://raw.githubusercontent.com/konafets/typo3_debugbar/develop/Documentation/Images/Configure.png)
 
 
-The Typo3DebugBar implements the `SingletonInterface`, therefore you can get the same instance via `GeneralUtility::makeInstance(Typo3DebugBar::class)`. This opens the possibility to interact with the the DebugBar from within TYPO3.
+The Typo3DebugBar implements the `SingletonInterface`, therefore you can get the same instance via `GeneralUtility::makeInstance(Typo3DebugBar::class)`. This opens the possibility to interact with the DebugBar from within TYPO3.
 
 ### Log Exceptions
 
