@@ -323,18 +323,6 @@ class Typo3DebugBar extends DebugBar implements SingletonInterface
      * Adds an exception to be profiled in the debug bar
      *
      * @param Exception $e
-     * @deprecated in favor of addThrowable
-     * @throws DebugBarException
-     */
-    public function addException(Exception $e)
-    {
-        return $this->addThrowable($e);
-    }
-
-    /**
-     * Adds an exception to be profiled in the debug bar
-     *
-     * @param Exception $e
      * @throws DebugBarException
      */
     public function addThrowable($e)
