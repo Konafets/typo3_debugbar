@@ -76,6 +76,8 @@ $debugBar->warning('Watch out…');
 $debugBar->addMessage('Another message', 'mylabel');
 ```
 
+![MessagesPane](Documentation/Images/MessagesPane.png)
+
 ### Add timers
 
 And start/stop timing:

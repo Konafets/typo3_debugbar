@@ -333,4 +333,40 @@ class Typo3DebugBar extends DebugBar implements SingletonInterface
             $collector->addThrowable($e);
         }
     }
+
+    /**
+     * Magic calls for adding messages
+     *
+     * @param string $method
+     * @param array $args
+     * @return mixed|void
+     * @throws DebugBarException
+     */
+    public function __call($method, $args)
+    {
+        $messageLevels = ['emergency', 'alert', 'critical', 'error', 'warning', 'notice', 'info', 'debug', 'log'];
+        if (in_array($method, $messageLevels)) {
+            foreach($args as $arg) {
+                $this->addMessage($arg, $method);
+            }
+        }
+    }
+
+    /**
+     * Adds a message to the MessagesCollector
+     *
+     * A message can be anything from an object to a string
+     *
+     * @param mixed $message
+     * @param string $label
+     * @throws DebugBarException
+     */
+    public function addMessage($message, $label = 'info')
+    {
+        if ($this->hasCollector('messages')) {
+            /** @var \DebugBar\DataCollector\MessagesCollector $collector */
+            $collector = $this->getCollector('messages');
+            $collector->addMessage($message, $label);
+        }
+    }
 }
