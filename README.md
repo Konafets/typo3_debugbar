@@ -6,7 +6,7 @@ It bootstraps some Collectors to work with TYPO3 and implements a couple custom 
 
 Read [the documentation](http://phpdebugbar.com/docs/) for more configuration options.
 
-![Screenshot](Documentation/Images/SQLView.png)
+![Screenshot](https://raw.githubusercontent.com/konafets/typo3_debugbar/develop/Documentation/Images/SQLView.png)
 
 Note: Use the DebugBar only in development. It can slow the application down (because it has to gather data). So when experiencing slowness, try disabling some of the collectors.
 
