@@ -1,5 +1,7 @@
 ## TYPO3 Debug Bar
 
+[![Latest Stable Version](https://poser.pugx.org/konafets/typo3_debugbar/v/stable)](https://packagist.org/packages/konafets/typo3_debugbar) [![Total Downloads](https://poser.pugx.org/konafets/typo3_debugbar/downloads)](https://packagist.org/packages/konafets/typo3_debugbar) [![Latest Unstable Version](https://poser.pugx.org/konafets/typo3_debugbar/v/unstable)](https://packagist.org/packages/konafets/typo3_debugbar) [![License](https://poser.pugx.org/konafets/typo3_debugbar/license)](https://packagist.org/packages/konafets/typo3_debugbar)
+
 This is a package to integrate [PHP Debug Bar](http://phpdebugbar.com/) with TYPO3.
 It uses several hooks to include the assets and itself into frontend output.
 It bootstraps some Collectors to work with TYPO3 and implements a couple custom DataCollectors, specific for TYPO3.
