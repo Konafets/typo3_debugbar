@@ -105,6 +105,5 @@ This is due to log *all* queries from the very beginning ... but at that point t
 
 As mentioned above the extension uses hooks. The following figure shows the usage during a request life cycle. 
 
-![DatabasePane](https://raw.githubusercontent.com/konafets/typo3_debugbar/develop/Documentation/Images/LifeCycle.svg)   
-
+![LifeCycle](Documentation/Images/LifeCycle.svg)   
 
