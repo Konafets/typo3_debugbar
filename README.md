@@ -10,7 +10,7 @@ Read [the documentation](http://phpdebugbar.com/docs/) for more configuration op
 
 ![Screenshot](https://raw.githubusercontent.com/konafets/typo3_debugbar/develop/Documentation/Images/SQLView.png)
 
-Note: Use the DebugBar only in development. It can slow the application down (because it has to gather data). So when experiencing slowness, try disabling some of the collectors.
+:warning: Use the DebugBar only in development. It can slow the application down (because it has to gather data). So when experiencing slowness, try disabling some of the collectors.
 
 The extension comes with the default collectors:
 
@@ -97,7 +97,7 @@ This pane shows all issued queries of the *default* connection against the datab
 
 ![DatabasePane](https://raw.githubusercontent.com/konafets/typo3_debugbar/develop/Documentation/Images/DatabasePane.gif)
 
-The extension uses the *connectToDB* hook to inject `Doctrine\DBAL\Logging\DebugStack` as a logger to the connection. At the end of the rendering process it retrieves the Logger and shows the logged queries.
+:information_source: The extension uses the *connectToDB* hook to inject `Doctrine\DBAL\Logging\DebugStack` as a logger to the connection. At the end of the rendering process it retrieves the Logger and shows the logged queries.
 Its important to understand, that the extension adds `Doctrine\DBAL\Logging\DebugStack` in any case, even if its not shown in the frontend. 
 This is due to log *all* queries from the very beginning ... but at that point the BE User is not initialized yet and its unclear if the DebugBar is enabled or not. Classical *Chicken-and-egg* problem.
 
