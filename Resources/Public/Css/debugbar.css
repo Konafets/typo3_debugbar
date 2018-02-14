@@ -1,0 +1,778 @@
+/*!
+ *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */@font-face{font-family:'PhpDebugbarFontAwesome';src:url('../fonts/fontawesome-webfont.eot?v=4.7.0');src:url('../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'),url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'),url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'),url('../fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'),url('../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');font-weight:normal;font-style:normal}.phpdebugbar-fa{display:inline-block;font:normal normal normal 14px/1 PhpDebugbarFontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.phpdebugbar-fa-lg{font-size:1.33333333em;line-height:.75em;vertical-align:-15%}.phpdebugbar-fa-2x{font-size:2em}.phpdebugbar-fa-3x{font-size:3em}.phpdebugbar-fa-4x{font-size:4em}.phpdebugbar-fa-5x{font-size:5em}.phpdebugbar-fa-fw{width:1.28571429em;text-align:center}.phpdebugbar-fa-ul{padding-left:0;margin-left:2.14285714em;list-style-type:none}.phpdebugbar-fa-ul>li{position:relative}.phpdebugbar-fa-li{position:absolute;left:-2.14285714em;width:2.14285714em;top:.14285714em;text-align:center}.phpdebugbar-fa-li.phpdebugbar-fa-lg{left:-1.85714286em}.phpdebugbar-fa-border{padding:.2em .25em .15em;border:solid .08em #eee;border-radius:.1em}.phpdebugbar-fa-pull-left{float:left}.phpdebugbar-fa-pull-right{float:right}.phpdebugbar-fa.phpdebugbar-fa-pull-left{margin-right:.3em}.phpdebugbar-fa.phpdebugbar-fa-pull-right{margin-left:.3em}.pull-right{float:right}.pull-left{float:left}.phpdebugbar-fa.pull-left{margin-right:.3em}.phpdebugbar-fa.pull-right{margin-left:.3em}.phpdebugbar-fa-spin{-webkit-animation:phpdebugbar-fa-spin 2s infinite linear;animation:phpdebugbar-fa-spin 2s infinite linear}.phpdebugbar-fa-pulse{-webkit-animation:phpdebugbar-fa-spin 1s infinite steps(8);animation:phpdebugbar-fa-spin 1s infinite steps(8)}@-webkit-keyframes phpdebugbar-fa-spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}@keyframes phpdebugbar-fa-spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}.phpdebugbar-fa-rotate-90{-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";-webkit-transform:rotate(90deg);-ms-transform:rotate(90deg);transform:rotate(90deg)}.phpdebugbar-fa-rotate-180{-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg)}.phpdebugbar-fa-rotate-270{-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";-webkit-transform:rotate(270deg);-ms-transform:rotate(270deg);transform:rotate(270deg)}.phpdebugbar-fa-flip-horizontal{-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";-webkit-transform:scale(-1, 1);-ms-transform:scale(-1, 1);transform:scale(-1, 1)}.phpdebugbar-fa-flip-vertical{-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";-webkit-transform:scale(1, -1);-ms-transform:scale(1, -1);transform:scale(1, -1)}:root .phpdebugbar-fa-rotate-90,:root .phpdebugbar-fa-rotate-180,:root .phpdebugbar-fa-rotate-270,:root .phpdebugbar-fa-flip-horizontal,:root .phpdebugbar-fa-flip-vertical{filter:none}.phpdebugbar-fa-stack{position:relative;display:inline-block;width:2em;height:2em;line-height:2em;vertical-align:middle}.phpdebugbar-fa-stack-1x,.phpdebugbar-fa-stack-2x{position:absolute;left:0;width:100%;text-align:center}.phpdebugbar-fa-stack-1x{line-height:inherit}.phpdebugbar-fa-stack-2x{font-size:2em}.phpdebugbar-fa-inverse{color:#fff}.phpdebugbar-fa-glass:before{content:"\f000"}.phpdebugbar-fa-music:before{content:"\f001"}.phpdebugbar-fa-search:before{content:"\f002"}.phpdebugbar-fa-envelope-o:before{content:"\f003"}.phpdebugbar-fa-heart:before{content:"\f004"}.phpdebugbar-fa-star:before{content:"\f005"}.phpdebugbar-fa-star-o:before{content:"\f006"}.phpdebugbar-fa-user:before{content:"\f007"}.phpdebugbar-fa-film:before{content:"\f008"}.phpdebugbar-fa-th-large:before{content:"\f009"}.phpdebugbar-fa-th:before{content:"\f00a"}.phpdebugbar-fa-th-list:before{content:"\f00b"}.phpdebugbar-fa-check:before{content:"\f00c"}.phpdebugbar-fa-remove:before,.phpdebugbar-fa-close:before,.phpdebugbar-fa-times:before{content:"\f00d"}.phpdebugbar-fa-search-plus:before{content:"\f00e"}.phpdebugbar-fa-search-minus:before{content:"\f010"}.phpdebugbar-fa-power-off:before{content:"\f011"}.phpdebugbar-fa-signal:before{content:"\f012"}.phpdebugbar-fa-gear:before,.phpdebugbar-fa-cog:before{content:"\f013"}.phpdebugbar-fa-trash-o:before{content:"\f014"}.phpdebugbar-fa-home:before{content:"\f015"}.phpdebugbar-fa-file-o:before{content:"\f016"}.phpdebugbar-fa-clock-o:before{content:"\f017"}.phpdebugbar-fa-road:before{content:"\f018"}.phpdebugbar-fa-download:before{content:"\f019"}.phpdebugbar-fa-arrow-circle-o-down:before{content:"\f01a"}.phpdebugbar-fa-arrow-circle-o-up:before{content:"\f01b"}.phpdebugbar-fa-inbox:before{content:"\f01c"}.phpdebugbar-fa-play-circle-o:before{content:"\f01d"}.phpdebugbar-fa-rotate-right:before,.phpdebugbar-fa-repeat:before{content:"\f01e"}.phpdebugbar-fa-refresh:before{content:"\f021"}.phpdebugbar-fa-list-alt:before{content:"\f022"}.phpdebugbar-fa-lock:before{content:"\f023"}.phpdebugbar-fa-flag:before{content:"\f024"}.phpdebugbar-fa-headphones:before{content:"\f025"}.phpdebugbar-fa-volume-off:before{content:"\f026"}.phpdebugbar-fa-volume-down:before{content:"\f027"}.phpdebugbar-fa-volume-up:before{content:"\f028"}.phpdebugbar-fa-qrcode:before{content:"\f029"}.phpdebugbar-fa-barcode:before{content:"\f02a"}.phpdebugbar-fa-tag:before{content:"\f02b"}.phpdebugbar-fa-tags:before{content:"\f02c"}.phpdebugbar-fa-book:before{content:"\f02d"}.phpdebugbar-fa-bookmark:before{content:"\f02e"}.phpdebugbar-fa-print:before{content:"\f02f"}.phpdebugbar-fa-camera:before{content:"\f030"}.phpdebugbar-fa-font:before{content:"\f031"}.phpdebugbar-fa-bold:before{content:"\f032"}.phpdebugbar-fa-italic:before{content:"\f033"}.phpdebugbar-fa-text-height:before{content:"\f034"}.phpdebugbar-fa-text-width:before{content:"\f035"}.phpdebugbar-fa-align-left:before{content:"\f036"}.phpdebugbar-fa-align-center:before{content:"\f037"}.phpdebugbar-fa-align-right:before{content:"\f038"}.phpdebugbar-fa-align-justify:before{content:"\f039"}.phpdebugbar-fa-list:before{content:"\f03a"}.phpdebugbar-fa-dedent:before,.phpdebugbar-fa-outdent:before{content:"\f03b"}.phpdebugbar-fa-indent:before{content:"\f03c"}.phpdebugbar-fa-video-camera:before{content:"\f03d"}.phpdebugbar-fa-photo:before,.phpdebugbar-fa-image:before,.phpdebugbar-fa-picture-o:before{content:"\f03e"}.phpdebugbar-fa-pencil:before{content:"\f040"}.phpdebugbar-fa-map-marker:before{content:"\f041"}.phpdebugbar-fa-adjust:before{content:"\f042"}.phpdebugbar-fa-tint:before{content:"\f043"}.phpdebugbar-fa-edit:before,.phpdebugbar-fa-pencil-square-o:before{content:"\f044"}.phpdebugbar-fa-share-square-o:before{content:"\f045"}.phpdebugbar-fa-check-square-o:before{content:"\f046"}.phpdebugbar-fa-arrows:before{content:"\f047"}.phpdebugbar-fa-step-backward:before{content:"\f048"}.phpdebugbar-fa-fast-backward:before{content:"\f049"}.phpdebugbar-fa-backward:before{content:"\f04a"}.phpdebugbar-fa-play:before{content:"\f04b"}.phpdebugbar-fa-pause:before{content:"\f04c"}.phpdebugbar-fa-stop:before{content:"\f04d"}.phpdebugbar-fa-forward:before{content:"\f04e"}.phpdebugbar-fa-fast-forward:before{content:"\f050"}.phpdebugbar-fa-step-forward:before{content:"\f051"}.phpdebugbar-fa-eject:before{content:"\f052"}.phpdebugbar-fa-chevron-left:before{content:"\f053"}.phpdebugbar-fa-chevron-right:before{content:"\f054"}.phpdebugbar-fa-plus-circle:before{content:"\f055"}.phpdebugbar-fa-minus-circle:before{content:"\f056"}.phpdebugbar-fa-times-circle:before{content:"\f057"}.phpdebugbar-fa-check-circle:before{content:"\f058"}.phpdebugbar-fa-question-circle:before{content:"\f059"}.phpdebugbar-fa-info-circle:before{content:"\f05a"}.phpdebugbar-fa-crosshairs:before{content:"\f05b"}.phpdebugbar-fa-times-circle-o:before{content:"\f05c"}.phpdebugbar-fa-check-circle-o:before{content:"\f05d"}.phpdebugbar-fa-ban:before{content:"\f05e"}.phpdebugbar-fa-arrow-left:before{content:"\f060"}.phpdebugbar-fa-arrow-right:before{content:"\f061"}.phpdebugbar-fa-arrow-up:before{content:"\f062"}.phpdebugbar-fa-arrow-down:before{content:"\f063"}.phpdebugbar-fa-mail-forward:before,.phpdebugbar-fa-share:before{content:"\f064"}.phpdebugbar-fa-expand:before{content:"\f065"}.phpdebugbar-fa-compress:before{content:"\f066"}.phpdebugbar-fa-plus:before{content:"\f067"}.phpdebugbar-fa-minus:before{content:"\f068"}.phpdebugbar-fa-asterisk:before{content:"\f069"}.phpdebugbar-fa-exclamation-circle:before{content:"\f06a"}.phpdebugbar-fa-gift:before{content:"\f06b"}.phpdebugbar-fa-leaf:before{content:"\f06c"}.phpdebugbar-fa-fire:before{content:"\f06d"}.phpdebugbar-fa-eye:before{content:"\f06e"}.phpdebugbar-fa-eye-slash:before{content:"\f070"}.phpdebugbar-fa-warning:before,.phpdebugbar-fa-exclamation-triangle:before{content:"\f071"}.phpdebugbar-fa-plane:before{content:"\f072"}.phpdebugbar-fa-calendar:before{content:"\f073"}.phpdebugbar-fa-random:before{content:"\f074"}.phpdebugbar-fa-comment:before{content:"\f075"}.phpdebugbar-fa-magnet:before{content:"\f076"}.phpdebugbar-fa-chevron-up:before{content:"\f077"}.phpdebugbar-fa-chevron-down:before{content:"\f078"}.phpdebugbar-fa-retweet:before{content:"\f079"}.phpdebugbar-fa-shopping-cart:before{content:"\f07a"}.phpdebugbar-fa-folder:before{content:"\f07b"}.phpdebugbar-fa-folder-open:before{content:"\f07c"}.phpdebugbar-fa-arrows-v:before{content:"\f07d"}.phpdebugbar-fa-arrows-h:before{content:"\f07e"}.phpdebugbar-fa-bar-chart-o:before,.phpdebugbar-fa-bar-chart:before{content:"\f080"}.phpdebugbar-fa-twitter-square:before{content:"\f081"}.phpdebugbar-fa-facebook-square:before{content:"\f082"}.phpdebugbar-fa-camera-retro:before{content:"\f083"}.phpdebugbar-fa-key:before{content:"\f084"}.phpdebugbar-fa-gears:before,.phpdebugbar-fa-cogs:before{content:"\f085"}.phpdebugbar-fa-comments:before{content:"\f086"}.phpdebugbar-fa-thumbs-o-up:before{content:"\f087"}.phpdebugbar-fa-thumbs-o-down:before{content:"\f088"}.phpdebugbar-fa-star-half:before{content:"\f089"}.phpdebugbar-fa-heart-o:before{content:"\f08a"}.phpdebugbar-fa-sign-out:before{content:"\f08b"}.phpdebugbar-fa-linkedin-square:before{content:"\f08c"}.phpdebugbar-fa-thumb-tack:before{content:"\f08d"}.phpdebugbar-fa-external-link:before{content:"\f08e"}.phpdebugbar-fa-sign-in:before{content:"\f090"}.phpdebugbar-fa-trophy:before{content:"\f091"}.phpdebugbar-fa-github-square:before{content:"\f092"}.phpdebugbar-fa-upload:before{content:"\f093"}.phpdebugbar-fa-lemon-o:before{content:"\f094"}.phpdebugbar-fa-phone:before{content:"\f095"}.phpdebugbar-fa-square-o:before{content:"\f096"}.phpdebugbar-fa-bookmark-o:before{content:"\f097"}.phpdebugbar-fa-phone-square:before{content:"\f098"}.phpdebugbar-fa-twitter:before{content:"\f099"}.phpdebugbar-fa-facebook-f:before,.phpdebugbar-fa-facebook:before{content:"\f09a"}.phpdebugbar-fa-github:before{content:"\f09b"}.phpdebugbar-fa-unlock:before{content:"\f09c"}.phpdebugbar-fa-credit-card:before{content:"\f09d"}.phpdebugbar-fa-feed:before,.phpdebugbar-fa-rss:before{content:"\f09e"}.phpdebugbar-fa-hdd-o:before{content:"\f0a0"}.phpdebugbar-fa-bullhorn:before{content:"\f0a1"}.phpdebugbar-fa-bell:before{content:"\f0f3"}.phpdebugbar-fa-certificate:before{content:"\f0a3"}.phpdebugbar-fa-hand-o-right:before{content:"\f0a4"}.phpdebugbar-fa-hand-o-left:before{content:"\f0a5"}.phpdebugbar-fa-hand-o-up:before{content:"\f0a6"}.phpdebugbar-fa-hand-o-down:before{content:"\f0a7"}.phpdebugbar-fa-arrow-circle-left:before{content:"\f0a8"}.phpdebugbar-fa-arrow-circle-right:before{content:"\f0a9"}.phpdebugbar-fa-arrow-circle-up:before{content:"\f0aa"}.phpdebugbar-fa-arrow-circle-down:before{content:"\f0ab"}.phpdebugbar-fa-globe:before{content:"\f0ac"}.phpdebugbar-fa-wrench:before{content:"\f0ad"}.phpdebugbar-fa-tasks:before{content:"\f0ae"}.phpdebugbar-fa-filter:before{content:"\f0b0"}.phpdebugbar-fa-briefcase:before{content:"\f0b1"}.phpdebugbar-fa-arrows-alt:before{content:"\f0b2"}.phpdebugbar-fa-group:before,.phpdebugbar-fa-users:before{content:"\f0c0"}.phpdebugbar-fa-chain:before,.phpdebugbar-fa-link:before{content:"\f0c1"}.phpdebugbar-fa-cloud:before{content:"\f0c2"}.phpdebugbar-fa-flask:before{content:"\f0c3"}.phpdebugbar-fa-cut:before,.phpdebugbar-fa-scissors:before{content:"\f0c4"}.phpdebugbar-fa-copy:before,.phpdebugbar-fa-files-o:before{content:"\f0c5"}.phpdebugbar-fa-paperclip:before{content:"\f0c6"}.phpdebugbar-fa-save:before,.phpdebugbar-fa-floppy-o:before{content:"\f0c7"}.phpdebugbar-fa-square:before{content:"\f0c8"}.phpdebugbar-fa-navicon:before,.phpdebugbar-fa-reorder:before,.phpdebugbar-fa-bars:before{content:"\f0c9"}.phpdebugbar-fa-list-ul:before{content:"\f0ca"}.phpdebugbar-fa-list-ol:before{content:"\f0cb"}.phpdebugbar-fa-strikethrough:before{content:"\f0cc"}.phpdebugbar-fa-underline:before{content:"\f0cd"}.phpdebugbar-fa-table:before{content:"\f0ce"}.phpdebugbar-fa-magic:before{content:"\f0d0"}.phpdebugbar-fa-truck:before{content:"\f0d1"}.phpdebugbar-fa-pinterest:before{content:"\f0d2"}.phpdebugbar-fa-pinterest-square:before{content:"\f0d3"}.phpdebugbar-fa-google-plus-square:before{content:"\f0d4"}.phpdebugbar-fa-google-plus:before{content:"\f0d5"}.phpdebugbar-fa-money:before{content:"\f0d6"}.phpdebugbar-fa-caret-down:before{content:"\f0d7"}.phpdebugbar-fa-caret-up:before{content:"\f0d8"}.phpdebugbar-fa-caret-left:before{content:"\f0d9"}.phpdebugbar-fa-caret-right:before{content:"\f0da"}.phpdebugbar-fa-columns:before{content:"\f0db"}.phpdebugbar-fa-unsorted:before,.phpdebugbar-fa-sort:before{content:"\f0dc"}.phpdebugbar-fa-sort-down:before,.phpdebugbar-fa-sort-desc:before{content:"\f0dd"}.phpdebugbar-fa-sort-up:before,.phpdebugbar-fa-sort-asc:before{content:"\f0de"}.phpdebugbar-fa-envelope:before{content:"\f0e0"}.phpdebugbar-fa-linkedin:before{content:"\f0e1"}.phpdebugbar-fa-rotate-left:before,.phpdebugbar-fa-undo:before{content:"\f0e2"}.phpdebugbar-fa-legal:before,.phpdebugbar-fa-gavel:before{content:"\f0e3"}.phpdebugbar-fa-dashboard:before,.phpdebugbar-fa-tachometer:before{content:"\f0e4"}.phpdebugbar-fa-comment-o:before{content:"\f0e5"}.phpdebugbar-fa-comments-o:before{content:"\f0e6"}.phpdebugbar-fa-flash:before,.phpdebugbar-fa-bolt:before{content:"\f0e7"}.phpdebugbar-fa-sitemap:before{content:"\f0e8"}.phpdebugbar-fa-umbrella:before{content:"\f0e9"}.phpdebugbar-fa-paste:before,.phpdebugbar-fa-clipboard:before{content:"\f0ea"}.phpdebugbar-fa-lightbulb-o:before{content:"\f0eb"}.phpdebugbar-fa-exchange:before{content:"\f0ec"}.phpdebugbar-fa-cloud-download:before{content:"\f0ed"}.phpdebugbar-fa-cloud-upload:before{content:"\f0ee"}.phpdebugbar-fa-user-md:before{content:"\f0f0"}.phpdebugbar-fa-stethoscope:before{content:"\f0f1"}.phpdebugbar-fa-suitcase:before{content:"\f0f2"}.phpdebugbar-fa-bell-o:before{content:"\f0a2"}.phpdebugbar-fa-coffee:before{content:"\f0f4"}.phpdebugbar-fa-cutlery:before{content:"\f0f5"}.phpdebugbar-fa-file-text-o:before{content:"\f0f6"}.phpdebugbar-fa-building-o:before{content:"\f0f7"}.phpdebugbar-fa-hospital-o:before{content:"\f0f8"}.phpdebugbar-fa-ambulance:before{content:"\f0f9"}.phpdebugbar-fa-medkit:before{content:"\f0fa"}.phpdebugbar-fa-fighter-jet:before{content:"\f0fb"}.phpdebugbar-fa-beer:before{content:"\f0fc"}.phpdebugbar-fa-h-square:before{content:"\f0fd"}.phpdebugbar-fa-plus-square:before{content:"\f0fe"}.phpdebugbar-fa-angle-double-left:before{content:"\f100"}.phpdebugbar-fa-angle-double-right:before{content:"\f101"}.phpdebugbar-fa-angle-double-up:before{content:"\f102"}.phpdebugbar-fa-angle-double-down:before{content:"\f103"}.phpdebugbar-fa-angle-left:before{content:"\f104"}.phpdebugbar-fa-angle-right:before{content:"\f105"}.phpdebugbar-fa-angle-up:before{content:"\f106"}.phpdebugbar-fa-angle-down:before{content:"\f107"}.phpdebugbar-fa-desktop:before{content:"\f108"}.phpdebugbar-fa-laptop:before{content:"\f109"}.phpdebugbar-fa-tablet:before{content:"\f10a"}.phpdebugbar-fa-mobile-phone:before,.phpdebugbar-fa-mobile:before{content:"\f10b"}.phpdebugbar-fa-circle-o:before{content:"\f10c"}.phpdebugbar-fa-quote-left:before{content:"\f10d"}.phpdebugbar-fa-quote-right:before{content:"\f10e"}.phpdebugbar-fa-spinner:before{content:"\f110"}.phpdebugbar-fa-circle:before{content:"\f111"}.phpdebugbar-fa-mail-reply:before,.phpdebugbar-fa-reply:before{content:"\f112"}.phpdebugbar-fa-github-alt:before{content:"\f113"}.phpdebugbar-fa-folder-o:before{content:"\f114"}.phpdebugbar-fa-folder-open-o:before{content:"\f115"}.phpdebugbar-fa-smile-o:before{content:"\f118"}.phpdebugbar-fa-frown-o:before{content:"\f119"}.phpdebugbar-fa-meh-o:before{content:"\f11a"}.phpdebugbar-fa-gamepad:before{content:"\f11b"}.phpdebugbar-fa-keyboard-o:before{content:"\f11c"}.phpdebugbar-fa-flag-o:before{content:"\f11d"}.phpdebugbar-fa-flag-checkered:before{content:"\f11e"}.phpdebugbar-fa-terminal:before{content:"\f120"}.phpdebugbar-fa-code:before{content:"\f121"}.phpdebugbar-fa-mail-reply-all:before,.phpdebugbar-fa-reply-all:before{content:"\f122"}.phpdebugbar-fa-star-half-empty:before,.phpdebugbar-fa-star-half-full:before,.phpdebugbar-fa-star-half-o:before{content:"\f123"}.phpdebugbar-fa-location-arrow:before{content:"\f124"}.phpdebugbar-fa-crop:before{content:"\f125"}.phpdebugbar-fa-code-fork:before{content:"\f126"}.phpdebugbar-fa-unlink:before,.phpdebugbar-fa-chain-broken:before{content:"\f127"}.phpdebugbar-fa-question:before{content:"\f128"}.phpdebugbar-fa-info:before{content:"\f129"}.phpdebugbar-fa-exclamation:before{content:"\f12a"}.phpdebugbar-fa-superscript:before{content:"\f12b"}.phpdebugbar-fa-subscript:before{content:"\f12c"}.phpdebugbar-fa-eraser:before{content:"\f12d"}.phpdebugbar-fa-puzzle-piece:before{content:"\f12e"}.phpdebugbar-fa-microphone:before{content:"\f130"}.phpdebugbar-fa-microphone-slash:before{content:"\f131"}.phpdebugbar-fa-shield:before{content:"\f132"}.phpdebugbar-fa-calendar-o:before{content:"\f133"}.phpdebugbar-fa-fire-extinguisher:before{content:"\f134"}.phpdebugbar-fa-rocket:before{content:"\f135"}.phpdebugbar-fa-maxcdn:before{content:"\f136"}.phpdebugbar-fa-chevron-circle-left:before{content:"\f137"}.phpdebugbar-fa-chevron-circle-right:before{content:"\f138"}.phpdebugbar-fa-chevron-circle-up:before{content:"\f139"}.phpdebugbar-fa-chevron-circle-down:before{content:"\f13a"}.phpdebugbar-fa-html5:before{content:"\f13b"}.phpdebugbar-fa-css3:before{content:"\f13c"}.phpdebugbar-fa-anchor:before{content:"\f13d"}.phpdebugbar-fa-unlock-alt:before{content:"\f13e"}.phpdebugbar-fa-bullseye:before{content:"\f140"}.phpdebugbar-fa-ellipsis-h:before{content:"\f141"}.phpdebugbar-fa-ellipsis-v:before{content:"\f142"}.phpdebugbar-fa-rss-square:before{content:"\f143"}.phpdebugbar-fa-play-circle:before{content:"\f144"}.phpdebugbar-fa-ticket:before{content:"\f145"}.phpdebugbar-fa-minus-square:before{content:"\f146"}.phpdebugbar-fa-minus-square-o:before{content:"\f147"}.phpdebugbar-fa-level-up:before{content:"\f148"}.phpdebugbar-fa-level-down:before{content:"\f149"}.phpdebugbar-fa-check-square:before{content:"\f14a"}.phpdebugbar-fa-pencil-square:before{content:"\f14b"}.phpdebugbar-fa-external-link-square:before{content:"\f14c"}.phpdebugbar-fa-share-square:before{content:"\f14d"}.phpdebugbar-fa-compass:before{content:"\f14e"}.phpdebugbar-fa-toggle-down:before,.phpdebugbar-fa-caret-square-o-down:before{content:"\f150"}.phpdebugbar-fa-toggle-up:before,.phpdebugbar-fa-caret-square-o-up:before{content:"\f151"}.phpdebugbar-fa-toggle-right:before,.phpdebugbar-fa-caret-square-o-right:before{content:"\f152"}.phpdebugbar-fa-euro:before,.phpdebugbar-fa-eur:before{content:"\f153"}.phpdebugbar-fa-gbp:before{content:"\f154"}.phpdebugbar-fa-dollar:before,.phpdebugbar-fa-usd:before{content:"\f155"}.phpdebugbar-fa-rupee:before,.phpdebugbar-fa-inr:before{content:"\f156"}.phpdebugbar-fa-cny:before,.phpdebugbar-fa-rmb:before,.phpdebugbar-fa-yen:before,.phpdebugbar-fa-jpy:before{content:"\f157"}.phpdebugbar-fa-ruble:before,.phpdebugbar-fa-rouble:before,.phpdebugbar-fa-rub:before{content:"\f158"}.phpdebugbar-fa-won:before,.phpdebugbar-fa-krw:before{content:"\f159"}.phpdebugbar-fa-bitcoin:before,.phpdebugbar-fa-btc:before{content:"\f15a"}.phpdebugbar-fa-file:before{content:"\f15b"}.phpdebugbar-fa-file-text:before{content:"\f15c"}.phpdebugbar-fa-sort-alpha-asc:before{content:"\f15d"}.phpdebugbar-fa-sort-alpha-desc:before{content:"\f15e"}.phpdebugbar-fa-sort-amount-asc:before{content:"\f160"}.phpdebugbar-fa-sort-amount-desc:before{content:"\f161"}.phpdebugbar-fa-sort-numeric-asc:before{content:"\f162"}.phpdebugbar-fa-sort-numeric-desc:before{content:"\f163"}.phpdebugbar-fa-thumbs-up:before{content:"\f164"}.phpdebugbar-fa-thumbs-down:before{content:"\f165"}.phpdebugbar-fa-youtube-square:before{content:"\f166"}.phpdebugbar-fa-youtube:before{content:"\f167"}.phpdebugbar-fa-xing:before{content:"\f168"}.phpdebugbar-fa-xing-square:before{content:"\f169"}.phpdebugbar-fa-youtube-play:before{content:"\f16a"}.phpdebugbar-fa-dropbox:before{content:"\f16b"}.phpdebugbar-fa-stack-overflow:before{content:"\f16c"}.phpdebugbar-fa-instagram:before{content:"\f16d"}.phpdebugbar-fa-flickr:before{content:"\f16e"}.phpdebugbar-fa-adn:before{content:"\f170"}.phpdebugbar-fa-bitbucket:before{content:"\f171"}.phpdebugbar-fa-bitbucket-square:before{content:"\f172"}.phpdebugbar-fa-tumblr:before{content:"\f173"}.phpdebugbar-fa-tumblr-square:before{content:"\f174"}.phpdebugbar-fa-long-arrow-down:before{content:"\f175"}.phpdebugbar-fa-long-arrow-up:before{content:"\f176"}.phpdebugbar-fa-long-arrow-left:before{content:"\f177"}.phpdebugbar-fa-long-arrow-right:before{content:"\f178"}.phpdebugbar-fa-apple:before{content:"\f179"}.phpdebugbar-fa-windows:before{content:"\f17a"}.phpdebugbar-fa-android:before{content:"\f17b"}.phpdebugbar-fa-linux:before{content:"\f17c"}.phpdebugbar-fa-dribbble:before{content:"\f17d"}.phpdebugbar-fa-skype:before{content:"\f17e"}.phpdebugbar-fa-foursquare:before{content:"\f180"}.phpdebugbar-fa-trello:before{content:"\f181"}.phpdebugbar-fa-female:before{content:"\f182"}.phpdebugbar-fa-male:before{content:"\f183"}.phpdebugbar-fa-gittip:before,.phpdebugbar-fa-gratipay:before{content:"\f184"}.phpdebugbar-fa-sun-o:before{content:"\f185"}.phpdebugbar-fa-moon-o:before{content:"\f186"}.phpdebugbar-fa-archive:before{content:"\f187"}.phpdebugbar-fa-bug:before{content:"\f188"}.phpdebugbar-fa-vk:before{content:"\f189"}.phpdebugbar-fa-weibo:before{content:"\f18a"}.phpdebugbar-fa-renren:before{content:"\f18b"}.phpdebugbar-fa-pagelines:before{content:"\f18c"}.phpdebugbar-fa-stack-exchange:before{content:"\f18d"}.phpdebugbar-fa-arrow-circle-o-right:before{content:"\f18e"}.phpdebugbar-fa-arrow-circle-o-left:before{content:"\f190"}.phpdebugbar-fa-toggle-left:before,.phpdebugbar-fa-caret-square-o-left:before{content:"\f191"}.phpdebugbar-fa-dot-circle-o:before{content:"\f192"}.phpdebugbar-fa-wheelchair:before{content:"\f193"}.phpdebugbar-fa-vimeo-square:before{content:"\f194"}.phpdebugbar-fa-turkish-lira:before,.phpdebugbar-fa-try:before{content:"\f195"}.phpdebugbar-fa-plus-square-o:before{content:"\f196"}.phpdebugbar-fa-space-shuttle:before{content:"\f197"}.phpdebugbar-fa-slack:before{content:"\f198"}.phpdebugbar-fa-envelope-square:before{content:"\f199"}.phpdebugbar-fa-wordpress:before{content:"\f19a"}.phpdebugbar-fa-openid:before{content:"\f19b"}.phpdebugbar-fa-institution:before,.phpdebugbar-fa-bank:before,.phpdebugbar-fa-university:before{content:"\f19c"}.phpdebugbar-fa-mortar-board:before,.phpdebugbar-fa-graduation-cap:before{content:"\f19d"}.phpdebugbar-fa-yahoo:before{content:"\f19e"}.phpdebugbar-fa-google:before{content:"\f1a0"}.phpdebugbar-fa-reddit:before{content:"\f1a1"}.phpdebugbar-fa-reddit-square:before{content:"\f1a2"}.phpdebugbar-fa-stumbleupon-circle:before{content:"\f1a3"}.phpdebugbar-fa-stumbleupon:before{content:"\f1a4"}.phpdebugbar-fa-delicious:before{content:"\f1a5"}.phpdebugbar-fa-digg:before{content:"\f1a6"}.phpdebugbar-fa-pied-piper-pp:before{content:"\f1a7"}.phpdebugbar-fa-pied-piper-alt:before{content:"\f1a8"}.phpdebugbar-fa-drupal:before{content:"\f1a9"}.phpdebugbar-fa-joomla:before{content:"\f1aa"}.phpdebugbar-fa-language:before{content:"\f1ab"}.phpdebugbar-fa-fax:before{content:"\f1ac"}.phpdebugbar-fa-building:before{content:"\f1ad"}.phpdebugbar-fa-child:before{content:"\f1ae"}.phpdebugbar-fa-paw:before{content:"\f1b0"}.phpdebugbar-fa-spoon:before{content:"\f1b1"}.phpdebugbar-fa-cube:before{content:"\f1b2"}.phpdebugbar-fa-cubes:before{content:"\f1b3"}.phpdebugbar-fa-behance:before{content:"\f1b4"}.phpdebugbar-fa-behance-square:before{content:"\f1b5"}.phpdebugbar-fa-steam:before{content:"\f1b6"}.phpdebugbar-fa-steam-square:before{content:"\f1b7"}.phpdebugbar-fa-recycle:before{content:"\f1b8"}.phpdebugbar-fa-automobile:before,.phpdebugbar-fa-car:before{content:"\f1b9"}.phpdebugbar-fa-cab:before,.phpdebugbar-fa-taxi:before{content:"\f1ba"}.phpdebugbar-fa-tree:before{content:"\f1bb"}.phpdebugbar-fa-spotify:before{content:"\f1bc"}.phpdebugbar-fa-deviantart:before{content:"\f1bd"}.phpdebugbar-fa-soundcloud:before{content:"\f1be"}.phpdebugbar-fa-database:before{content:"\f1c0"}.phpdebugbar-fa-file-pdf-o:before{content:"\f1c1"}.phpdebugbar-fa-file-word-o:before{content:"\f1c2"}.phpdebugbar-fa-file-excel-o:before{content:"\f1c3"}.phpdebugbar-fa-file-powerpoint-o:before{content:"\f1c4"}.phpdebugbar-fa-file-photo-o:before,.phpdebugbar-fa-file-picture-o:before,.phpdebugbar-fa-file-image-o:before{content:"\f1c5"}.phpdebugbar-fa-file-zip-o:before,.phpdebugbar-fa-file-archive-o:before{content:"\f1c6"}.phpdebugbar-fa-file-sound-o:before,.phpdebugbar-fa-file-audio-o:before{content:"\f1c7"}.phpdebugbar-fa-file-movie-o:before,.phpdebugbar-fa-file-video-o:before{content:"\f1c8"}.phpdebugbar-fa-file-code-o:before{content:"\f1c9"}.phpdebugbar-fa-vine:before{content:"\f1ca"}.phpdebugbar-fa-codepen:before{content:"\f1cb"}.phpdebugbar-fa-jsfiddle:before{content:"\f1cc"}.phpdebugbar-fa-life-bouy:before,.phpdebugbar-fa-life-buoy:before,.phpdebugbar-fa-life-saver:before,.phpdebugbar-fa-support:before,.phpdebugbar-fa-life-ring:before{content:"\f1cd"}.phpdebugbar-fa-circle-o-notch:before{content:"\f1ce"}.phpdebugbar-fa-ra:before,.phpdebugbar-fa-resistance:before,.phpdebugbar-fa-rebel:before{content:"\f1d0"}.phpdebugbar-fa-ge:before,.phpdebugbar-fa-empire:before{content:"\f1d1"}.phpdebugbar-fa-git-square:before{content:"\f1d2"}.phpdebugbar-fa-git:before{content:"\f1d3"}.phpdebugbar-fa-y-combinator-square:before,.phpdebugbar-fa-yc-square:before,.phpdebugbar-fa-hacker-news:before{content:"\f1d4"}.phpdebugbar-fa-tencent-weibo:before{content:"\f1d5"}.phpdebugbar-fa-qq:before{content:"\f1d6"}.phpdebugbar-fa-wechat:before,.phpdebugbar-fa-weixin:before{content:"\f1d7"}.phpdebugbar-fa-send:before,.phpdebugbar-fa-paper-plane:before{content:"\f1d8"}.phpdebugbar-fa-send-o:before,.phpdebugbar-fa-paper-plane-o:before{content:"\f1d9"}.phpdebugbar-fa-history:before{content:"\f1da"}.phpdebugbar-fa-circle-thin:before{content:"\f1db"}.phpdebugbar-fa-header:before{content:"\f1dc"}.phpdebugbar-fa-paragraph:before{content:"\f1dd"}.phpdebugbar-fa-sliders:before{content:"\f1de"}.phpdebugbar-fa-share-alt:before{content:"\f1e0"}.phpdebugbar-fa-share-alt-square:before{content:"\f1e1"}.phpdebugbar-fa-bomb:before{content:"\f1e2"}.phpdebugbar-fa-soccer-ball-o:before,.phpdebugbar-fa-futbol-o:before{content:"\f1e3"}.phpdebugbar-fa-tty:before{content:"\f1e4"}.phpdebugbar-fa-binoculars:before{content:"\f1e5"}.phpdebugbar-fa-plug:before{content:"\f1e6"}.phpdebugbar-fa-slideshare:before{content:"\f1e7"}.phpdebugbar-fa-twitch:before{content:"\f1e8"}.phpdebugbar-fa-yelp:before{content:"\f1e9"}.phpdebugbar-fa-newspaper-o:before{content:"\f1ea"}.phpdebugbar-fa-wifi:before{content:"\f1eb"}.phpdebugbar-fa-calculator:before{content:"\f1ec"}.phpdebugbar-fa-paypal:before{content:"\f1ed"}.phpdebugbar-fa-google-wallet:before{content:"\f1ee"}.phpdebugbar-fa-cc-visa:before{content:"\f1f0"}.phpdebugbar-fa-cc-mastercard:before{content:"\f1f1"}.phpdebugbar-fa-cc-discover:before{content:"\f1f2"}.phpdebugbar-fa-cc-amex:before{content:"\f1f3"}.phpdebugbar-fa-cc-paypal:before{content:"\f1f4"}.phpdebugbar-fa-cc-stripe:before{content:"\f1f5"}.phpdebugbar-fa-bell-slash:before{content:"\f1f6"}.phpdebugbar-fa-bell-slash-o:before{content:"\f1f7"}.phpdebugbar-fa-trash:before{content:"\f1f8"}.phpdebugbar-fa-copyright:before{content:"\f1f9"}.phpdebugbar-fa-at:before{content:"\f1fa"}.phpdebugbar-fa-eyedropper:before{content:"\f1fb"}.phpdebugbar-fa-paint-brush:before{content:"\f1fc"}.phpdebugbar-fa-birthday-cake:before{content:"\f1fd"}.phpdebugbar-fa-area-chart:before{content:"\f1fe"}.phpdebugbar-fa-pie-chart:before{content:"\f200"}.phpdebugbar-fa-line-chart:before{content:"\f201"}.phpdebugbar-fa-lastfm:before{content:"\f202"}.phpdebugbar-fa-lastfm-square:before{content:"\f203"}.phpdebugbar-fa-toggle-off:before{content:"\f204"}.phpdebugbar-fa-toggle-on:before{content:"\f205"}.phpdebugbar-fa-bicycle:before{content:"\f206"}.phpdebugbar-fa-bus:before{content:"\f207"}.phpdebugbar-fa-ioxhost:before{content:"\f208"}.phpdebugbar-fa-angellist:before{content:"\f209"}.phpdebugbar-fa-cc:before{content:"\f20a"}.phpdebugbar-fa-shekel:before,.phpdebugbar-fa-sheqel:before,.phpdebugbar-fa-ils:before{content:"\f20b"}.phpdebugbar-fa-meanpath:before{content:"\f20c"}.phpdebugbar-fa-buysellads:before{content:"\f20d"}.phpdebugbar-fa-connectdevelop:before{content:"\f20e"}.phpdebugbar-fa-dashcube:before{content:"\f210"}.phpdebugbar-fa-forumbee:before{content:"\f211"}.phpdebugbar-fa-leanpub:before{content:"\f212"}.phpdebugbar-fa-sellsy:before{content:"\f213"}.phpdebugbar-fa-shirtsinbulk:before{content:"\f214"}.phpdebugbar-fa-simplybuilt:before{content:"\f215"}.phpdebugbar-fa-skyatlas:before{content:"\f216"}.phpdebugbar-fa-cart-plus:before{content:"\f217"}.phpdebugbar-fa-cart-arrow-down:before{content:"\f218"}.phpdebugbar-fa-diamond:before{content:"\f219"}.phpdebugbar-fa-ship:before{content:"\f21a"}.phpdebugbar-fa-user-secret:before{content:"\f21b"}.phpdebugbar-fa-motorcycle:before{content:"\f21c"}.phpdebugbar-fa-street-view:before{content:"\f21d"}.phpdebugbar-fa-heartbeat:before{content:"\f21e"}.phpdebugbar-fa-venus:before{content:"\f221"}.phpdebugbar-fa-mars:before{content:"\f222"}.phpdebugbar-fa-mercury:before{content:"\f223"}.phpdebugbar-fa-intersex:before,.phpdebugbar-fa-transgender:before{content:"\f224"}.phpdebugbar-fa-transgender-alt:before{content:"\f225"}.phpdebugbar-fa-venus-double:before{content:"\f226"}.phpdebugbar-fa-mars-double:before{content:"\f227"}.phpdebugbar-fa-venus-mars:before{content:"\f228"}.phpdebugbar-fa-mars-stroke:before{content:"\f229"}.phpdebugbar-fa-mars-stroke-v:before{content:"\f22a"}.phpdebugbar-fa-mars-stroke-h:before{content:"\f22b"}.phpdebugbar-fa-neuter:before{content:"\f22c"}.phpdebugbar-fa-genderless:before{content:"\f22d"}.phpdebugbar-fa-facebook-official:before{content:"\f230"}.phpdebugbar-fa-pinterest-p:before{content:"\f231"}.phpdebugbar-fa-whatsapp:before{content:"\f232"}.phpdebugbar-fa-server:before{content:"\f233"}.phpdebugbar-fa-user-plus:before{content:"\f234"}.phpdebugbar-fa-user-times:before{content:"\f235"}.phpdebugbar-fa-hotel:before,.phpdebugbar-fa-bed:before{content:"\f236"}.phpdebugbar-fa-viacoin:before{content:"\f237"}.phpdebugbar-fa-train:before{content:"\f238"}.phpdebugbar-fa-subway:before{content:"\f239"}.phpdebugbar-fa-medium:before{content:"\f23a"}.phpdebugbar-fa-yc:before,.phpdebugbar-fa-y-combinator:before{content:"\f23b"}.phpdebugbar-fa-optin-monster:before{content:"\f23c"}.phpdebugbar-fa-opencart:before{content:"\f23d"}.phpdebugbar-fa-expeditedssl:before{content:"\f23e"}.phpdebugbar-fa-battery-4:before,.phpdebugbar-fa-battery:before,.phpdebugbar-fa-battery-full:before{content:"\f240"}.phpdebugbar-fa-battery-3:before,.phpdebugbar-fa-battery-three-quarters:before{content:"\f241"}.phpdebugbar-fa-battery-2:before,.phpdebugbar-fa-battery-half:before{content:"\f242"}.phpdebugbar-fa-battery-1:before,.phpdebugbar-fa-battery-quarter:before{content:"\f243"}.phpdebugbar-fa-battery-0:before,.phpdebugbar-fa-battery-empty:before{content:"\f244"}.phpdebugbar-fa-mouse-pointer:before{content:"\f245"}.phpdebugbar-fa-i-cursor:before{content:"\f246"}.phpdebugbar-fa-object-group:before{content:"\f247"}.phpdebugbar-fa-object-ungroup:before{content:"\f248"}.phpdebugbar-fa-sticky-note:before{content:"\f249"}.phpdebugbar-fa-sticky-note-o:before{content:"\f24a"}.phpdebugbar-fa-cc-jcb:before{content:"\f24b"}.phpdebugbar-fa-cc-diners-club:before{content:"\f24c"}.phpdebugbar-fa-clone:before{content:"\f24d"}.phpdebugbar-fa-balance-scale:before{content:"\f24e"}.phpdebugbar-fa-hourglass-o:before{content:"\f250"}.phpdebugbar-fa-hourglass-1:before,.phpdebugbar-fa-hourglass-start:before{content:"\f251"}.phpdebugbar-fa-hourglass-2:before,.phpdebugbar-fa-hourglass-half:before{content:"\f252"}.phpdebugbar-fa-hourglass-3:before,.phpdebugbar-fa-hourglass-end:before{content:"\f253"}.phpdebugbar-fa-hourglass:before{content:"\f254"}.phpdebugbar-fa-hand-grab-o:before,.phpdebugbar-fa-hand-rock-o:before{content:"\f255"}.phpdebugbar-fa-hand-stop-o:before,.phpdebugbar-fa-hand-paper-o:before{content:"\f256"}.phpdebugbar-fa-hand-scissors-o:before{content:"\f257"}.phpdebugbar-fa-hand-lizard-o:before{content:"\f258"}.phpdebugbar-fa-hand-spock-o:before{content:"\f259"}.phpdebugbar-fa-hand-pointer-o:before{content:"\f25a"}.phpdebugbar-fa-hand-peace-o:before{content:"\f25b"}.phpdebugbar-fa-trademark:before{content:"\f25c"}.phpdebugbar-fa-registered:before{content:"\f25d"}.phpdebugbar-fa-creative-commons:before{content:"\f25e"}.phpdebugbar-fa-gg:before{content:"\f260"}.phpdebugbar-fa-gg-circle:before{content:"\f261"}.phpdebugbar-fa-tripadvisor:before{content:"\f262"}.phpdebugbar-fa-odnoklassniki:before{content:"\f263"}.phpdebugbar-fa-odnoklassniki-square:before{content:"\f264"}.phpdebugbar-fa-get-pocket:before{content:"\f265"}.phpdebugbar-fa-wikipedia-w:before{content:"\f266"}.phpdebugbar-fa-safari:before{content:"\f267"}.phpdebugbar-fa-chrome:before{content:"\f268"}.phpdebugbar-fa-firefox:before{content:"\f269"}.phpdebugbar-fa-opera:before{content:"\f26a"}.phpdebugbar-fa-internet-explorer:before{content:"\f26b"}.phpdebugbar-fa-tv:before,.phpdebugbar-fa-television:before{content:"\f26c"}.phpdebugbar-fa-contao:before{content:"\f26d"}.phpdebugbar-fa-500px:before{content:"\f26e"}.phpdebugbar-fa-amazon:before{content:"\f270"}.phpdebugbar-fa-calendar-plus-o:before{content:"\f271"}.phpdebugbar-fa-calendar-minus-o:before{content:"\f272"}.phpdebugbar-fa-calendar-times-o:before{content:"\f273"}.phpdebugbar-fa-calendar-check-o:before{content:"\f274"}.phpdebugbar-fa-industry:before{content:"\f275"}.phpdebugbar-fa-map-pin:before{content:"\f276"}.phpdebugbar-fa-map-signs:before{content:"\f277"}.phpdebugbar-fa-map-o:before{content:"\f278"}.phpdebugbar-fa-map:before{content:"\f279"}.phpdebugbar-fa-commenting:before{content:"\f27a"}.phpdebugbar-fa-commenting-o:before{content:"\f27b"}.phpdebugbar-fa-houzz:before{content:"\f27c"}.phpdebugbar-fa-vimeo:before{content:"\f27d"}.phpdebugbar-fa-black-tie:before{content:"\f27e"}.phpdebugbar-fa-fonticons:before{content:"\f280"}.phpdebugbar-fa-reddit-alien:before{content:"\f281"}.phpdebugbar-fa-edge:before{content:"\f282"}.phpdebugbar-fa-credit-card-alt:before{content:"\f283"}.phpdebugbar-fa-codiepie:before{content:"\f284"}.phpdebugbar-fa-modx:before{content:"\f285"}.phpdebugbar-fa-fort-awesome:before{content:"\f286"}.phpdebugbar-fa-usb:before{content:"\f287"}.phpdebugbar-fa-product-hunt:before{content:"\f288"}.phpdebugbar-fa-mixcloud:before{content:"\f289"}.phpdebugbar-fa-scribd:before{content:"\f28a"}.phpdebugbar-fa-pause-circle:before{content:"\f28b"}.phpdebugbar-fa-pause-circle-o:before{content:"\f28c"}.phpdebugbar-fa-stop-circle:before{content:"\f28d"}.phpdebugbar-fa-stop-circle-o:before{content:"\f28e"}.phpdebugbar-fa-shopping-bag:before{content:"\f290"}.phpdebugbar-fa-shopping-basket:before{content:"\f291"}.phpdebugbar-fa-hashtag:before{content:"\f292"}.phpdebugbar-fa-bluetooth:before{content:"\f293"}.phpdebugbar-fa-bluetooth-b:before{content:"\f294"}.phpdebugbar-fa-percent:before{content:"\f295"}.phpdebugbar-fa-gitlab:before{content:"\f296"}.phpdebugbar-fa-wpbeginner:before{content:"\f297"}.phpdebugbar-fa-wpforms:before{content:"\f298"}.phpdebugbar-fa-envira:before{content:"\f299"}.phpdebugbar-fa-universal-access:before{content:"\f29a"}.phpdebugbar-fa-wheelchair-alt:before{content:"\f29b"}.phpdebugbar-fa-question-circle-o:before{content:"\f29c"}.phpdebugbar-fa-blind:before{content:"\f29d"}.phpdebugbar-fa-audio-description:before{content:"\f29e"}.phpdebugbar-fa-volume-control-phone:before{content:"\f2a0"}.phpdebugbar-fa-braille:before{content:"\f2a1"}.phpdebugbar-fa-assistive-listening-systems:before{content:"\f2a2"}.phpdebugbar-fa-asl-interpreting:before,.phpdebugbar-fa-american-sign-language-interpreting:before{content:"\f2a3"}.phpdebugbar-fa-deafness:before,.phpdebugbar-fa-hard-of-hearing:before,.phpdebugbar-fa-deaf:before{content:"\f2a4"}.phpdebugbar-fa-glide:before{content:"\f2a5"}.phpdebugbar-fa-glide-g:before{content:"\f2a6"}.phpdebugbar-fa-signing:before,.phpdebugbar-fa-sign-language:before{content:"\f2a7"}.phpdebugbar-fa-low-vision:before{content:"\f2a8"}.phpdebugbar-fa-viadeo:before{content:"\f2a9"}.phpdebugbar-fa-viadeo-square:before{content:"\f2aa"}.phpdebugbar-fa-snapchat:before{content:"\f2ab"}.phpdebugbar-fa-snapchat-ghost:before{content:"\f2ac"}.phpdebugbar-fa-snapchat-square:before{content:"\f2ad"}.phpdebugbar-fa-pied-piper:before{content:"\f2ae"}.phpdebugbar-fa-first-order:before{content:"\f2b0"}.phpdebugbar-fa-yoast:before{content:"\f2b1"}.phpdebugbar-fa-themeisle:before{content:"\f2b2"}.phpdebugbar-fa-google-plus-circle:before,.phpdebugbar-fa-google-plus-official:before{content:"\f2b3"}.phpdebugbar-fa-fa:before,.phpdebugbar-fa-font-awesome:before{content:"\f2b4"}.phpdebugbar-fa-handshake-o:before{content:"\f2b5"}.phpdebugbar-fa-envelope-open:before{content:"\f2b6"}.phpdebugbar-fa-envelope-open-o:before{content:"\f2b7"}.phpdebugbar-fa-linode:before{content:"\f2b8"}.phpdebugbar-fa-address-book:before{content:"\f2b9"}.phpdebugbar-fa-address-book-o:before{content:"\f2ba"}.phpdebugbar-fa-vcard:before,.phpdebugbar-fa-address-card:before{content:"\f2bb"}.phpdebugbar-fa-vcard-o:before,.phpdebugbar-fa-address-card-o:before{content:"\f2bc"}.phpdebugbar-fa-user-circle:before{content:"\f2bd"}.phpdebugbar-fa-user-circle-o:before{content:"\f2be"}.phpdebugbar-fa-user-o:before{content:"\f2c0"}.phpdebugbar-fa-id-badge:before{content:"\f2c1"}.phpdebugbar-fa-drivers-license:before,.phpdebugbar-fa-id-card:before{content:"\f2c2"}.phpdebugbar-fa-drivers-license-o:before,.phpdebugbar-fa-id-card-o:before{content:"\f2c3"}.phpdebugbar-fa-quora:before{content:"\f2c4"}.phpdebugbar-fa-free-code-camp:before{content:"\f2c5"}.phpdebugbar-fa-telegram:before{content:"\f2c6"}.phpdebugbar-fa-thermometer-4:before,.phpdebugbar-fa-thermometer:before,.phpdebugbar-fa-thermometer-full:before{content:"\f2c7"}.phpdebugbar-fa-thermometer-3:before,.phpdebugbar-fa-thermometer-three-quarters:before{content:"\f2c8"}.phpdebugbar-fa-thermometer-2:before,.phpdebugbar-fa-thermometer-half:before{content:"\f2c9"}.phpdebugbar-fa-thermometer-1:before,.phpdebugbar-fa-thermometer-quarter:before{content:"\f2ca"}.phpdebugbar-fa-thermometer-0:before,.phpdebugbar-fa-thermometer-empty:before{content:"\f2cb"}.phpdebugbar-fa-shower:before{content:"\f2cc"}.phpdebugbar-fa-bathtub:before,.phpdebugbar-fa-s15:before,.phpdebugbar-fa-bath:before{content:"\f2cd"}.phpdebugbar-fa-podcast:before{content:"\f2ce"}.phpdebugbar-fa-window-maximize:before{content:"\f2d0"}.phpdebugbar-fa-window-minimize:before{content:"\f2d1"}.phpdebugbar-fa-window-restore:before{content:"\f2d2"}.phpdebugbar-fa-times-rectangle:before,.phpdebugbar-fa-window-close:before{content:"\f2d3"}.phpdebugbar-fa-times-rectangle-o:before,.phpdebugbar-fa-window-close-o:before{content:"\f2d4"}.phpdebugbar-fa-bandcamp:before{content:"\f2d5"}.phpdebugbar-fa-grav:before{content:"\f2d6"}.phpdebugbar-fa-etsy:before{content:"\f2d7"}.phpdebugbar-fa-imdb:before{content:"\f2d8"}.phpdebugbar-fa-ravelry:before{content:"\f2d9"}.phpdebugbar-fa-eercast:before{content:"\f2da"}.phpdebugbar-fa-microchip:before{content:"\f2db"}.phpdebugbar-fa-snowflake-o:before{content:"\f2dc"}.phpdebugbar-fa-superpowers:before{content:"\f2dd"}.phpdebugbar-fa-wpexplorer:before{content:"\f2de"}.phpdebugbar-fa-meetup:before{content:"\f2e0"}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}.sr-only-focusable:active,.sr-only-focusable:focus{position:static;width:auto;height:auto;margin:0;overflow:visible;clip:auto}
+
+/*
+
+github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+
+*/
+
+div.phpdebugbar .hljs {
+  display: block; padding: 0.5em;
+  color: #333;
+  background: #f8f8f8
+}
+
+div.phpdebugbar .hljs-comment,
+div.phpdebugbar .hljs-template_comment,
+div.phpdebugbar .diff .hljs-header,
+div.phpdebugbar .hljs-javadoc {
+  color: #998;
+  font-style: italic
+}
+
+div.phpdebugbar .hljs-keyword,
+div.phpdebugbar .css .rule .hljs-keyword,
+div.phpdebugbar .hljs-winutils,
+div.phpdebugbar .javascript .hljs-title,
+div.phpdebugbar .nginx .hljs-title,
+div.phpdebugbar .hljs-subst,
+div.phpdebugbar .hljs-request,
+div.phpdebugbar .hljs-status {
+  color: #333;
+  font-weight: bold
+}
+
+div.phpdebugbar .hljs-number,
+div.phpdebugbar .hljs-hexcolor,
+div.phpdebugbar .ruby .hljs-constant {
+  color: #099;
+}
+
+div.phpdebugbar .hljs-string,
+div.phpdebugbar .hljs-tag .hljs-value,
+div.phpdebugbar .hljs-phpdoc,
+div.phpdebugbar .tex .hljs-formula {
+  color: #d14
+}
+
+div.phpdebugbar .hljs-title,
+div.phpdebugbar .hljs-id,
+div.phpdebugbar .coffeescript .hljs-params,
+div.phpdebugbar .scss .hljs-preprocessor {
+  color: #900;
+  font-weight: bold
+}
+
+div.phpdebugbar .javascript .hljs-title,
+div.phpdebugbar .lisp .hljs-title,
+div.phpdebugbar .clojure .hljs-title,
+div.phpdebugbar .hljs-subst {
+  font-weight: normal
+}
+
+div.phpdebugbar .hljs-class .hljs-title,
+div.phpdebugbar .haskell .hljs-type,
+div.phpdebugbar .vhdl .hljs-literal,
+div.phpdebugbar .tex .hljs-command {
+  color: #458;
+  font-weight: bold
+}
+
+div.phpdebugbar .hljs-tag,
+div.phpdebugbar .hljs-tag .hljs-title,
+div.phpdebugbar .hljs-rules .hljs-property,
+div.phpdebugbar .django .hljs-tag .hljs-keyword {
+  color: #000080;
+  font-weight: normal
+}
+
+div.phpdebugbar .hljs-attribute,
+div.phpdebugbar .hljs-variable,
+div.phpdebugbar .lisp .hljs-body {
+  color: #008080
+}
+
+div.phpdebugbar .hljs-regexp {
+  color: #009926
+}
+
+div.phpdebugbar .hljs-symbol,
+div.phpdebugbar .ruby .hljs-symbol .hljs-string,
+div.phpdebugbar .lisp .hljs-keyword,
+div.phpdebugbar .tex .hljs-special,
+div.phpdebugbar .hljs-prompt {
+  color: #990073
+}
+
+div.phpdebugbar .hljs-built_in,
+div.phpdebugbar .lisp .hljs-title,
+div.phpdebugbar .clojure .hljs-built_in {
+  color: #0086b3
+}
+
+div.phpdebugbar .hljs-preprocessor,
+div.phpdebugbar .hljs-pragma,
+div.phpdebugbar .hljs-pi,
+div.phpdebugbar .hljs-doctype,
+div.phpdebugbar .hljs-shebang,
+div.phpdebugbar .hljs-cdata {
+  color: #999;
+  font-weight: bold
+}
+
+div.phpdebugbar .hljs-deletion {
+  background: #fdd
+}
+
+div.phpdebugbar .hljs-addition {
+  background: #dfd
+}
+
+div.phpdebugbar .diff .hljs-change {
+  background: #0086b3
+}
+
+div.phpdebugbar .hljs-chunk {
+  color: #aaa
+}
+
+/* Hide debugbar when printing a page */
+@media print {
+  div.phpdebugbar {
+    display: none;
+  }
+}
+
+div.phpdebugbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-top: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #fff;
+  z-index: 10000;
+  font-size: 14px;
+  color: #000;
+  text-align: left;
+  line-height: 1;
+  letter-spacing: normal;
+  direction: ltr;
+}
+
+div.phpdebugbar a,
+div.phpdebugbar-openhandler {
+  cursor: pointer;
+}
+
+div.phpdebugbar-drag-capture {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10001;
+  background: none;
+  display: none;
+  cursor: n-resize;
+}
+
+div.phpdebugbar-closed {
+    width: auto;
+}
+
+div.phpdebugbar * {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: normal;
+  text-decoration: none;
+  clear: initial;
+  width: auto;
+  -moz-box-sizing: content-box;
+       box-sizing: content-box;
+}
+
+div.phpdebugbar ol, div.phpdebugbar ul {
+  list-style: none;
+}
+
+div.phpdebugbar table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+div.phpdebugbar input[type='text'], div.phpdebugbar input[type='password'] {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #fff;
+  font-size: 14px;
+  color: #000;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+div.phpdebugbar code, div.phpdebugbar pre, div.phpdebugbar samp {
+  background: none;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 1em;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+div.phpdebugbar code, div.phpdebugbar pre {
+  color: #000;
+}
+
+div.phpdebugbar pre.sf-dump {
+  color: #a0a000;
+  outline: 0;
+}
+
+a.phpdebugbar-restore-btn {
+  float: left;
+  padding: 5px 8px;
+  font-size: 14px;
+  color: #555;
+  text-decoration: none;
+  border-right: 1px solid #ddd;
+}
+
+div.phpdebugbar-resize-handle {
+  display: none;
+  height: 4px;
+  margin-top: -4px;
+  width: 100%;
+  background: none;
+  border-bottom: 1px solid #ccc;
+  cursor: n-resize;
+}
+
+div.phpdebugbar-closed, div.phpdebugbar-minimized{
+  border-top: 1px solid #ccc;
+}
+/* -------------------------------------- */
+
+div.phpdebugbar-header, a.phpdebugbar-restore-btn {
+    background: #efefef url(data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2020%2020%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ccircle%20fill%3D%22%23000%22%20cx%3D%2210%22%20cy%3D%2210%22%20r%3D%229%22%2F%3E%3Cpath%20d%3D%22M6.039%208.342c.463%200%20.772.084.927.251.154.168.191.455.11.862-.084.424-.247.727-.487.908-.241.182-.608.272-1.1.272h-.743l.456-2.293h.837zm-2.975%204.615h1.22l.29-1.457H5.62c.461%200%20.84-.047%201.139-.142.298-.095.569-.254.812-.477.205-.184.37-.387.497-.608.127-.222.217-.466.27-.734.13-.65.032-1.155-.292-1.518-.324-.362-.84-.543-1.545-.543H4.153l-1.089%205.479zM9.235%206.02h1.21l-.289%201.458h1.079c.679%200%201.147.115%201.405.347.258.231.335.607.232%201.125l-.507%202.55h-1.23l.481-2.424c.055-.276.035-.464-.06-.565-.095-.1-.298-.15-.608-.15H9.98L9.356%2011.5h-1.21l1.089-5.48M15.566%208.342c.464%200%20.773.084.928.251.154.168.19.455.11.862-.084.424-.247.727-.488.908-.24.182-.607.272-1.1.272h-.742l.456-2.293h.836zm-2.974%204.615h1.22l.29-1.457h1.046c.461%200%20.84-.047%201.139-.142.298-.095.569-.254.812-.477.205-.184.37-.387.497-.608.127-.222.217-.466.27-.734.129-.65.032-1.155-.292-1.518-.324-.362-.84-.543-1.545-.543H13.68l-1.089%205.479z%22%20fill%3D%22%23FFF%22%2F%3E%3C%2Fsvg%3E)  no-repeat 5px 4px / 20px 20px;
+}
+div.phpdebugbar-header {
+  padding-left: 29px;
+  min-height: 26px;
+  line-height: 16px;
+}
+div.phpdebugbar-header:before, div.phpdebugbar-header:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+div.phpdebugbar-header:after {
+  clear: both;
+}
+div.phpdebugbar-header-left {
+  float: left;
+}
+div.phpdebugbar-header-right {
+  float: right;
+}
+div.phpdebugbar-header > div > * {
+  padding: 5px 5px;
+  font-size: 14px;
+  color: #555;
+  text-decoration: none;
+}
+div.phpdebugbar-header-left > * {
+  float: left;
+}
+div.phpdebugbar-header-right > * {
+  float: right;
+}
+div.phpdebugbar-header-right > select {
+  padding: 0;
+}
+
+/* -------------------------------------- */
+
+span.phpdebugbar-indicator,
+a.phpdebugbar-indicator,
+a.phpdebugbar-close-btn {
+  border-right: 1px solid #ddd;
+}
+
+a.phpdebugbar-tab.phpdebugbar-active {
+  background: #ccc;
+  color: #444;
+  background-image: linear-gradient(bottom, rgb(173,173,173) 41%, rgb(209,209,209) 71%);
+  background-image: -o-linear-gradient(bottom, rgb(173,173,173) 41%, rgb(209,209,209) 71%);
+  background-image: -moz-linear-gradient(bottom, rgb(173,173,173) 41%, rgb(209,209,209) 71%);
+  background-image: -webkit-linear-gradient(bottom, rgb(173,173,173) 41%, rgb(209,209,209) 71%);
+  background-image: -ms-linear-gradient(bottom, rgb(173,173,173) 41%, rgb(209,209,209) 71%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.41, rgb(173,173,173)), color-stop(0.71, rgb(209,209,209)));
+}
+  a.phpdebugbar-tab span.phpdebugbar-badge {
+    display: none;
+    margin-left: 5px;
+    font-size: 11px;
+    line-height: 14px;
+    padding: 0 6px;
+    background: #ccc;
+    border-radius: 4px;
+    color: #555;
+    font-weight: normal;
+    text-shadow: none;
+    vertical-align: middle;
+  }
+  a.phpdebugbar-tab i {
+    display: none;
+    vertical-align: middle;
+  }
+  a.phpdebugbar-tab span.phpdebugbar-badge.phpdebugbar-visible {
+    display: inline;
+  }
+  a.phpdebugbar-tab span.phpdebugbar-badge.phpdebugbar-important {
+    background: #ed6868;
+    color: white;
+  }
+
+a.phpdebugbar-close-btn, a.phpdebugbar-open-btn, a.phpdebugbar-restore-btn, a.phpdebugbar-minimize-btn , a.phpdebugbar-maximize-btn {
+  width: 16px;
+  height: 16px;
+}
+
+a.phpdebugbar-minimize-btn , a.phpdebugbar-maximize-btn {
+  padding-right: 0 !important;
+}
+
+a.phpdebugbar-maximize-btn { display: none}
+
+a.phpdebugbar-minimize-btn { display: block}
+
+div.phpdebugbar-minimized a.phpdebugbar-maximize-btn { display: block}
+
+div.phpdebugbar-minimized a.phpdebugbar-minimize-btn { display: none}
+
+a.phpdebugbar-minimize-btn {
+  background:url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201792%201792%22%20id%3D%22chevron-down%22%3E%3Cpath%20d%3D%22M1683%20808l-742%20741q-19%2019-45%2019t-45-19l-742-741q-19-19-19-45.5t19-45.5l166-165q19-19%2045-19t45%2019l531%20531%20531-531q19-19%2045-19t45%2019l166%20165q19%2019%2019%2045.5t-19%2045.5z%22%2F%3E%3C%2Fsvg%3E) no-repeat 6px 6px / 14px 14px;
+}
+
+a.phpdebugbar-maximize-btn {
+  background:url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201792%201792%22%20id%3D%22chevron-up%22%3E%3Cpath%20d%3D%22M1683%201331l-166%20165q-19%2019-45%2019t-45-19l-531-531-531%20531q-19%2019-45%2019t-45-19l-166-165q-19-19-19-45.5t19-45.5l742-741q19-19%2045-19t45%2019l742%20741q19%2019%2019%2045.5t-19%2045.5z%22%2F%3E%3C%2Fsvg%3E) no-repeat 6px 6px / 14px 14px;
+}
+
+a.phpdebugbar-close-btn {
+  background: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201792%201792%22%20id%3D%22close%22%3E%3Cpath%20d%3D%22M1490%201322q0%2040-28%2068l-136%20136q-28%2028-68%2028t-68-28l-294-294-294%20294q-28%2028-68%2028t-68-28l-136-136q-28-28-28-68t28-68l294-294-294-294q-28-28-28-68t28-68l136-136q28-28%2068-28t68%2028l294%20294%20294-294q28-28%2068-28t68%2028l136%20136q28%2028%2028%2068t-28%2068l-294%20294%20294%20294q28%2028%2028%2068z%22%2F%3E%3C%2Fsvg%3E) no-repeat 9px 6px / 14px 14px;
+}
+
+a.phpdebugbar-open-btn {
+  background: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201792%201792%22%20id%3D%22folder-open%22%3E%3Cpath%20d%3D%22M1815%20952q0%2031-31%2066l-336%20396q-43%2051-120.5%2086.5t-143.5%2035.5h-1088q-34%200-60.5-13t-26.5-43q0-31%2031-66l336-396q43-51%20120.5-86.5t143.5-35.5h1088q34%200%2060.5%2013t26.5%2043zm-343-344v160h-832q-94%200-197%2047.5t-164%20119.5l-337%20396-5%206q0-4-.5-12.5t-.5-12.5v-960q0-92%2066-158t158-66h320q92%200%20158%2066t66%20158v32h544q92%200%20158%2066t66%20158z%22%2F%3E%3C%2Fsvg%3E) no-repeat 8px 6px / 14px 14px;
+}
+
+.phpdebugbar-indicator {
+  position: relative;
+  cursor: pointer;
+}
+  .phpdebugbar-indicator span.phpdebugbar-text {
+    margin-left: 5px;
+  }
+  .phpdebugbar-indicator span.phpdebugbar-tooltip {
+    display: none;
+    position: absolute;
+    top: -30px;
+    background: #efefef;
+    opacity: .7;
+    border: 1px solid #ccc;
+    color: #555;
+    font-size: 11px;
+    padding: 2px 3px;
+    z-index: 1000;
+    text-align: center;
+    width: 200%;
+    right: 0;
+  }
+  .phpdebugbar-indicator:hover span.phpdebugbar-tooltip:not(.phpdebugbar-disabled) {
+    display: block;
+  }
+
+select.phpdebugbar-datasets-switcher {
+  float: right;
+  display: none;
+  margin: 2px 0 0 7px;
+  max-width: 200px;
+  max-height: 23px;
+  padding: 0;
+}
+
+/* -------------------------------------- */
+
+div.phpdebugbar-body {
+  border-top: 1px solid #ccc;
+  display: none;
+  position: relative;
+  height: 300px;
+}
+
+/* -------------------------------------- */
+
+div.phpdebugbar-panel {
+  display: none;
+  height: 100%;
+  overflow: auto;
+  width: 100%;
+}
+div.phpdebugbar-panel.phpdebugbar-active {
+  display: block;
+}
+
+/* -------------------------------------- */
+
+div.phpdebugbar-mini-design a.phpdebugbar-tab {
+  position: relative;
+  border-right: 1px solid #ddd;
+}
+  div.phpdebugbar-mini-design a.phpdebugbar-tab span.phpdebugbar-text {
+    display: none;
+  }
+  div.phpdebugbar-mini-design a.phpdebugbar-tab:hover span.phpdebugbar-text {
+    display: block;
+    position: absolute;
+    top: -30px;
+    background: #efefef;
+    opacity: .7;
+    border: 1px solid #ccc;
+    color: #555;
+    font-size: 11px;
+    padding: 2px 3px;
+    z-index: 1000;
+    text-align: center;
+    right: 0;
+  }
+  div.phpdebugbar-mini-design a.phpdebugbar-tab i {
+    display:inline-block;
+  }
+
+pre.phpdebugbar-widgets-code-block {
+    white-space: pre;
+    word-wrap: normal;
+    overflow: hidden;
+}
+  pre.phpdebugbar-widgets-code-block code {
+    display: block;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  pre.phpdebugbar-widgets-code-block code.phpdebugbar-widgets-numbered-code {
+    padding: 5px;
+  }
+    pre.phpdebugbar-widgets-code-block code span.phpdebugbar-widgets-highlighted-line {
+      background: #800000;
+      color: #fff;
+      display: inline-block;
+      min-width: 100%;
+    }
+      pre.phpdebugbar-widgets-code-block code span.phpdebugbar-widgets-highlighted-line span {
+        background: none !important;
+        color: inherit !important;
+      }
+  pre.phpdebugbar-widgets-code-block ul {
+    float: left;
+    padding: 5px;
+    background: #cacaca;
+    border-right: 1px solid #aaa;
+    text-align: right;
+  }
+
+/* -------------------------------------- */
+
+ul.phpdebugbar-widgets-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+  ul.phpdebugbar-widgets-list li.phpdebugbar-widgets-list-item {
+    padding: 3px 6px;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    overflow: hidden;
+  }
+  ul.phpdebugbar-widgets-list li.phpdebugbar-widgets-list-item:hover {
+    background: #fafafa;
+  }
+
+/* -------------------------------------- */
+
+div.phpdebugbar-widgets-messages {
+  position: relative;
+  height: 100%;
+}
+  div.phpdebugbar-widgets-messages ul.phpdebugbar-widgets-list {
+    padding-bottom: 20px;
+  }
+  div.phpdebugbar-widgets-messages li.phpdebugbar-widgets-list-item span.phpdebugbar-widgets-value.phpdebugbar-widgets-warning:before {
+    font-family: PhpDebugbarFontAwesome;
+    content: "\f071";
+    margin-right: 8px;
+    font-size: 11px;
+    color: #ecb03d;
+  }
+  div.phpdebugbar-widgets-messages li.phpdebugbar-widgets-list-item span.phpdebugbar-widgets-value.phpdebugbar-widgets-error {
+    color: red;
+  }
+  div.phpdebugbar-widgets-messages li.phpdebugbar-widgets-list-item span.phpdebugbar-widgets-value.phpdebugbar-widgets-error:before {
+    font-family: PhpDebugbarFontAwesome;
+    content: "\f057";
+    margin-right: 8px;
+    font-size: 11px;
+    color: red;
+  }
+  div.phpdebugbar-widgets-messages li.phpdebugbar-widgets-list-item pre.sf-dump {
+    display: inline;
+  }
+  div.phpdebugbar-widgets-messages li.phpdebugbar-widgets-list-item span.phpdebugbar-widgets-collector,
+  div.phpdebugbar-widgets-messages li.phpdebugbar-widgets-list-item span.phpdebugbar-widgets-label {
+    float: right;
+    font-size: 12px;
+    padding: 2px 4px;
+    color: #888;
+    margin: 0 2px;
+    text-decoration: none;
+    text-shadow: none;
+    background: none;
+    font-weight: normal;
+  }
+  div.phpdebugbar-widgets-messages li.phpdebugbar-widgets-list-item span.phpdebugbar-widgets-collector {
+    color: #555;
+    font-style: italic;
+  }
+  div.phpdebugbar-widgets-messages div.phpdebugbar-widgets-toolbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+  }
+    div.phpdebugbar-widgets-messages div.phpdebugbar-widgets-toolbar input {
+      border: 0;
+      margin: 0;
+      margin-left: 7px;
+      width: 50%;
+      box-shadow: none;
+    }
+    div.phpdebugbar-widgets-messages div.phpdebugbar-widgets-toolbar input:focus {
+      outline: none;
+    }
+      div.phpdebugbar-widgets-messages div.phpdebugbar-widgets-toolbar a.phpdebugbar-widgets-filter {
+        float: right;
+        font-size: 12px;
+        padding: 2px 4px;
+        background: #7cacd5;
+        margin: 0 2px;
+        border-radius: 4px;
+        color: #fff;
+        text-decoration: none;
+      }
+      div.phpdebugbar-widgets-messages div.phpdebugbar-widgets-toolbar a.phpdebugbar-widgets-filter.phpdebugbar-widgets-excluded {
+        background: #eee;
+        color: #888;
+      }
+
+/* -------------------------------------- */
+
+dl.phpdebugbar-widgets-kvlist {
+  margin: 0;
+}
+  dl.phpdebugbar-widgets-kvlist dt {
+    float: left;
+    width: 150px;
+    padding: 5px;
+    border-top: 1px solid #eee;
+    font-weight: bold;
+    clear: both;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  dl.phpdebugbar-widgets-kvlist dd {
+    margin-left: 160px;
+    padding: 5px;
+    border-top: 1px solid #eee;
+    cursor: pointer;
+    min-height: 17px;
+  }
+
+/* -------------------------------------- */
+
+dl.phpdebugbar-widgets-varlist,
+dl.phpdebugbar-widgets-htmlvarlist {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+  dl.phpdebugbar-widgets-htmlvarlist dd {
+    cursor: initial;
+  }
+
+/* -------------------------------------- */
+
+ul.phpdebugbar-widgets-timeline {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+  ul.phpdebugbar-widgets-timeline .phpdebugbar-widgets-measure {
+    height: 20px;
+    position: relative;
+    border-bottom: 1px solid #eee;
+    display: block;
+  }
+  ul.phpdebugbar-widgets-timeline li:hover {
+    background: #fafafa;
+  }
+    ul.phpdebugbar-widgets-timeline li span.phpdebugbar-widgets-label,
+    ul.phpdebugbar-widgets-timeline li span.phpdebugbar-widgets-collector {
+      position: absolute;
+      font-size: 12px;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+      color: #555;
+      top: 4px;
+      left: 5px;
+      background: none;
+      text-shadow: none;
+      font-weight: normal;
+      white-space: pre;
+    }
+    ul.phpdebugbar-widgets-timeline li span.phpdebugbar-widgets-collector {
+      left: initial;
+      right: 5px;
+    }
+    ul.phpdebugbar-widgets-timeline li span.phpdebugbar-widgets-value {
+      display: block;
+      position: absolute;
+      height: 10px;
+      background: #3db9ec;
+      top: 5px;
+      border-radius: 2px;
+      min-width: 1px;
+    }
+    ul.phpdebugbar-widgets-timeline table.phpdebugbar-widgets-params {
+      display: none;
+      width: 70%;
+      margin: 10px;
+      border: 1px solid #ddd;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+      border-collapse: collapse;
+    }
+      ul.phpdebugbar-widgets-timeline table.phpdebugbar-widgets-params td {
+        border: 1px solid #ddd;
+        padding: 0 5px;
+      }
+      ul.phpdebugbar-widgets-timeline table.phpdebugbar-widgets-params .phpdebugbar-widgets-name {
+        width: 20%;
+        font-weight: bold;
+      }
+
+/* -------------------------------------- */
+
+div.phpdebugbar-widgets-exceptions li.phpdebugbar-widgets-list-item {
+  cursor: pointer;
+}
+  div.phpdebugbar-widgets-exceptions li.phpdebugbar-widgets-list-item span.phpdebugbar-widgets-message {
+    display: block;
+    color: red;
+  }
+
+  div.phpdebugbar-widgets-exceptions li.phpdebugbar-widgets-list-item span.phpdebugbar-widgets-filename {
+    display: block;
+    font-style: italic;
+    color: #555;
+  }
+
+  div.phpdebugbar-widgets-exceptions li.phpdebugbar-widgets-list-item span.phpdebugbar-widgets-type {
+    display: block;
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    font-weight: bold;
+  }
+
+  div.phpdebugbar-widgets-exceptions li.phpdebugbar-widgets-list-item pre.phpdebugbar-widgets-file {
+    display: none;
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  }
+
+div.phpdebugbar-widgets-exceptions a.phpdebugbar-widgets-editor-link:before {
+  font-family: PhpDebugbarFontAwesome;
+  margin-right: 4px;
+  font-size: 12px;
+  font-style: normal;
+}
+
+div.phpdebugbar-widgets-exceptions a.phpdebugbar-widgets-editor-link:before {
+  content: "\f08e";
+  margin-left: 4px;
+}
+
+div.phpdebugbar-openhandler-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .3;
+    z-index: 20000;
+}
+
+div.phpdebugbar-openhandler {
+    position: fixed;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 70%;
+    height: 70%;
+    background: #fff;
+    border: 2px solid #888;
+    overflow: auto;
+    z-index: 20001;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+    div.phpdebugbar-openhandler a {
+        color: #555;
+    }
+    div.phpdebugbar-openhandler .phpdebugbar-openhandler-header {
+        background: #efefef url(data:image/png;base64,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)  no-repeat 5px 4px;
+        padding-left: 29px;
+        min-height: 26px;
+        line-height: 25px;
+        color: #555;
+        margin-bottom: 10px;
+    }
+        div.phpdebugbar-openhandler .phpdebugbar-openhandler-header a {
+            font-size: 14px;
+            color: #555;
+            text-decoration: none;
+            float: right;
+            padding: 5px 8px;
+        }
+    div.phpdebugbar-openhandler table {
+        width: 100%;
+        table-layout: fixed;
+        font-size: 14px;
+    }
+        div.phpdebugbar-openhandler table td {
+            padding: 6px 3px;
+            border-bottom: 1px solid #ddd;
+        }
+            div.phpdebugbar-openhandler table td a{
+                display: block;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+    div.phpdebugbar-openhandler .phpdebugbar-openhandler-actions {
+        text-align: center;
+        padding: 7px 0;
+    }
+        div.phpdebugbar-openhandler .phpdebugbar-openhandler-actions a {
+            margin: 0 10px;
+            color: #555;
+        }
+

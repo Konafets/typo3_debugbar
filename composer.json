@@ -1,0 +1,31 @@
+{
+  "name": "konafets/typo3_debugbar",
+  "type": "typo3-cms-extension",
+  "description": "Utilizes the PHP Debugbar to provide information of the system health to the frontend.",
+  "authors": [
+    {
+      "name": "Stefano Kowalke",
+      "email": "info@arroba-it.de",
+      "role": "Developer"
+    }
+  ],
+  "license": ["GPL-2.0+"],
+  "keywords": ["typo3", "php", "debugging", "debugbar", "cms"],
+  "require": {
+    "typo3/cms-core": ">=8.7.0 <9",
+    "maximebf/debugbar": "^1.15"
+  },
+  "replace": {
+    "typo_debugbar": "self.version"
+  },
+  "autoload": {
+    "psr-4": {
+      "Konafets\\TYPO3DebugBar\\": "Classes"
+    }
+  },
+  "extra": {
+    "typo3/cms": {
+      "cms-package-dir": "{$vendor-dir}/typo3/cms"
+    }
+  }
+}
