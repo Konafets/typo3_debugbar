@@ -1,5 +1,6 @@
+===============
 TYPO3 Debug Bar
----------------
+===============
 
 |Latest Stable Version| |Total Downloads| |Latest Unstable Version|
 |License|
@@ -17,7 +18,8 @@ configuration options.
    :alt: Screenshot
 
    Screenshot
-:warning: Use the DebugBar only in development. It can slow the
+
+Info: Use the DebugBar only in development. It can slow the
 application down (because it has to gather data). So when experiencing
 slowness, try disabling some of the collectors.
 
@@ -43,7 +45,7 @@ And includes some custom collectors:
 -  SessionCollector: Show session data
 
 Credits
-~~~~~~~
+"""""""
 
 The extension is heavily inspired by the `Laravel
 Debugbar <https://github.com/barryvdh/laravel-debugbar>`__. Thanks for
@@ -51,7 +53,7 @@ your good work `Barry vd. Heuvel <https://github.com/barryvdh>`__. I
 also copied the idea of a ServiceProvider from Laravel.
 
 Installation
-------------
+============
 
 Require this package with composer. It is recommended to only require
 the package for development.
@@ -65,7 +67,7 @@ The DebugBar is enabled by default and will be displayed to you if you
 are logged into the backend as an administrator.
 
 Usage
------
+=====
 
 The extension is configurable through the Extension Manager. There you
 can enable/disable the DebugBar as well as the DataCollectors.
@@ -78,7 +80,7 @@ can get the same instance via
 possibility to interact with the DebugBar from within TYPO3.
 
 Log Exceptions
-^^^^^^^^^^^^^^
+--------------
 
 .. code:: php
 
@@ -107,6 +109,7 @@ Add messages
    :alt: MessagesPane
 
    MessagesPane
+
 Add timers
 ^^^^^^^^^^
 
@@ -124,7 +127,7 @@ And start/stop timing:
     });
 
 Database
-~~~~~~~~
+--------
 
 This pane shows all issued queries of the *default* connection against
 the database. To see the values of a prepared statements, click on the
@@ -134,18 +137,19 @@ statement.
    :alt: DatabasePane
 
    DatabasePane
-:information\_source: The extension uses the *connectToDB* hook to
-inject ``Doctrine\DBAL\Logging\DebugStack`` as a logger to the
+
+Info: The extension uses the *connectToDB* hook to
+inject `Doctrine\DBAL\Logging\DebugStack` as a logger to the
 connection. At the end of the rendering process it retrieves the Logger
 and shows the logged queries. Its important to understand, that the
-extension adds ``Doctrine\DBAL\Logging\DebugStack`` in any case, even if
+extension adds `Doctrine\DBAL\Logging\DebugStack` in any case, even if
 its not shown in the frontend. This is due to log *all* queries from the
 very beginning ... but at that point the BE User is not initialized yet
 and its unclear if the DebugBar is enabled or not. Classical
 *Chicken-and-egg* problem.
 
 Lifecycle
----------
+=========
 
 As mentioned above the extension uses hooks. The following figure shows
 the usage during a request life cycle.
