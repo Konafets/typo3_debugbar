@@ -17,8 +17,6 @@ configuration options.
 .. figure:: https://raw.githubusercontent.com/konafets/typo3_debugbar/develop/Documentation/Images/SQLView.png
    :alt: Screenshot
 
-   Screenshot
-
 Info: Use the DebugBar only in development. It can slow the
 application down (because it has to gather data). So when experiencing
 slowness, try disabling some of the collectors.
@@ -72,7 +70,10 @@ Usage
 The extension is configurable through the Extension Manager. There you
 can enable/disable the DebugBar as well as the DataCollectors.
 
-|Configuration| ### Use it everywhere
+|Configuration|
+
+Use it everywhere
+-----------------
 
 The Typo3DebugBar implements the ``SingletonInterface``, therefore you
 can get the same instance via
@@ -80,7 +81,7 @@ can get the same instance via
 possibility to interact with the DebugBar from within TYPO3.
 
 Log Exceptions
---------------
+^^^^^^^^^^^^^^
 
 .. code:: php
 
@@ -136,8 +137,6 @@ statement.
 .. figure:: https://raw.githubusercontent.com/konafets/typo3_debugbar/develop/Documentation/Images/DatabasePane.gif
    :alt: DatabasePane
 
-   DatabasePane
-
 Info: The extension uses the *connectToDB* hook to
 inject `Doctrine\DBAL\Logging\DebugStack` as a logger to the
 connection. At the end of the rendering process it retrieves the Logger
@@ -154,10 +153,8 @@ Lifecycle
 As mentioned above the extension uses hooks. The following figure shows
 the usage during a request life cycle.
 
-.. figure:: https://raw.githubusercontent.com/konafets/typo3_debugbar/develop/Documentation/Images/LifeCycle.svg
+.. figure:: Documentation/Images/LifeCycle.svg
    :alt: LifeCycle
-
-   LifeCycle
 
 .. |Latest Stable Version| image:: https://poser.pugx.org/konafets/typo3_debugbar/v/stable
    :target: https://packagist.org/packages/konafets/typo3_debugbar
