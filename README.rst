@@ -42,16 +42,10 @@ And includes some custom collectors:
 -  AuthCollector: Show the username of the logged-in backend user
 -  SessionCollector: Show session data
 
-Credits
-"""""""
-
-The extension is heavily inspired by the `Laravel
-Debugbar <https://github.com/barryvdh/laravel-debugbar>`__. Thanks for
-your good work `Barry vd. Heuvel <https://github.com/barryvdh>`__. I
-also copied the idea of a ServiceProvider from Laravel.
-
+************
 Installation
-============
+************
+
 
 Require this package with composer. It is recommended to only require
 the package for development.
@@ -64,8 +58,9 @@ Afterwards you need to activate the extension in the Extension Manager.
 The DebugBar is enabled by default and will be displayed to you if you
 are logged into the backend as an administrator.
 
+*****
 Usage
-=====
+*****
 
 The extension is configurable through the Extension Manager. There you
 can enable/disable the DebugBar as well as the DataCollectors.
@@ -81,7 +76,7 @@ can get the same instance via
 possibility to interact with the DebugBar from within TYPO3.
 
 Log Exceptions
-^^^^^^^^^^^^^^
+--------------
 
 .. code:: php
 
@@ -147,14 +142,25 @@ very beginning ... but at that point the BE User is not initialized yet
 and its unclear if the DebugBar is enabled or not. Classical
 *Chicken-and-egg* problem.
 
+*********
 Lifecycle
-=========
+*********
 
 As mentioned above the extension uses hooks. The following figure shows
 the usage during a request life cycle.
 
 .. figure:: Documentation/Images/LifeCycle.svg
    :alt: LifeCycle
+
+*******
+Credits
+*******
+
+The extension is heavily inspired by the `Laravel
+Debugbar <https://github.com/barryvdh/laravel-debugbar>`__. Thanks for
+your good work `Barry vd. Heuvel <https://github.com/barryvdh>`__. I
+also copied the idea of a ServiceProvider from Laravel.
+
 
 .. |Latest Stable Version| image:: https://poser.pugx.org/konafets/typo3_debugbar/v/stable
    :target: https://packagist.org/packages/konafets/typo3_debugbar
