@@ -104,8 +104,6 @@ Add messages
 .. figure:: https://raw.githubusercontent.com/konafets/typo3_debugbar/develop/Documentation/Images/MessagesPane.png
    :alt: MessagesPane
 
-   MessagesPane
-
 Add timers
 ^^^^^^^^^^
 
