@@ -15,6 +15,7 @@ use DebugBar\DebugBar;
 use DebugBar\DebugBarException;
 use DebugBar\JavascriptRenderer;
 use Exception;
+use Konafets\TYPO3DebugBar\DataCollectors\VarDumpCollector;
 use TYPO3\CMS\Backend\FrontendBackendUserAuthentication;
 use TYPO3\CMS\Core\Page\PageRenderer;
 use TYPO3\CMS\Core\SingletonInterface;
@@ -200,6 +201,17 @@ class Typo3DebugBar extends DebugBar implements SingletonInterface
             }
         }
 
+        if ($this->shouldCollect('vardump')) {
+            try {
+                $this->addCollector(new VarDumpCollector());
+                $this->jsAssets[] = $this->pathToJsResourceFolder . 'generic/widget.js';
+            } catch (DebugBarException $e) {
+                $this->addThrowable(
+                    new Exception('Can not add VarDumpCollector to TYPO3 DebugBar:' . $e->getMessage(), $e->getCode(), $e)
+                );
+            }
+        }
+
         $this->booted = true;
     }
 
@@ -367,6 +379,21 @@ class Typo3DebugBar extends DebugBar implements SingletonInterface
             /** @var \DebugBar\DataCollector\MessagesCollector $collector */
             $collector = $this->getCollector('messages');
             $collector->addMessage($message, $label);
+        }
+    }
+
+    /**
+     * Adds an item to the VarDumpCollector
+     *
+     * @param mixed $item
+     * @throws DebugBarException
+     */
+    public function var_dump($item)
+    {
+        if ($this->hasCollector('vardump')) {
+            /** @var VarDumpCollector $collector */
+            $collector = $this->getCollector('vardump');
+            $collector->addVarDump($item);
         }
     }
 }

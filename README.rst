@@ -140,6 +140,15 @@ very beginning ... but at that point the BE User is not initialized yet
 and its unclear if the DebugBar is enabled or not. Classical
 *Chicken-and-egg* problem.
 
+VarDump
+--------
+
+Everybody knows the output of DebugUtility::var_dump() ... and everybody knows that it breaks the layout. Lets move the output
+to the TYPO3 Debugbar. Use `Konafets\TYPO3DebugBar\Overrides\DebuggerUtility::var_dump($variable)` and get an output like this:
+
+.. figure:: https://raw.githubusercontent.com/konafets/typo3_debugbar/develop/Documentation/Images/VarDumpPane.png
+   :alt: VarDumpPane
+
 *********
 Lifecycle
 *********

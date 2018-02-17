@@ -30,3 +30,6 @@ session = 1
 
 # cat=general/enable/12; type=boolean; label=Enable TYPO3 Collector:TYPO3 version and environment
 typo3 = 1
+
+# cat=general/enable/13; type=boolean; label=Enable VarDump Collector:Show the outout of DebuggerUtility::vardump() in the DebugBar
+vardump = 1
