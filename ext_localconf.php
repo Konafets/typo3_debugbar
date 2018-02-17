@@ -21,5 +21,5 @@ if (TYPO3_MODE === 'FE') {
         $extensionPath . 'Classes/Typo3DebugBarServiceProvider.php:Konafets\\TYPO3DebugBar\\Typo3DebugBarServiceProvider->addDebugBar';
 }
 
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][TYPO3\CMS\Core\TimeTracker\TimeTracker::class] = ['className' => Ait\TYPO3DebugBar\Overrides\TimeTracker::class];
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][TYPO3\CMS\Core\TimeTracker\TimeTracker::class] = ['className' => Konafets\TYPO3DebugBar\Overrides\TimeTracker::class];
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][TYPO3\CMS\Frontend\Authentication\FrontendUserAuthentication::class] = ['className' => Konafets\TYPO3DebugBar\Overrides\FrontendUserAuthentication::class];

@@ -16,7 +16,7 @@ time = 1
 # cat=general/enable/7; type=boolean; label=Enable Exception Collector
 exceptions = 1
 
-# cat=general/enable/8; type=boolean; label=Enable Memmory Usage Collector
+# cat=general/enable/8; type=boolean; label=Enable Memory Usage Collector
 memory = 1
 
 # cat=general/enable/9; type=boolean; label=Enable Database Collector:Show database queries and bindings
@@ -30,3 +30,6 @@ session = 1
 
 # cat=general/enable/12; type=boolean; label=Enable TYPO3 Collector:TYPO3 version and environment
 typo3 = 1
+
+# cat=general/enable/13; type=boolean; label=Enable VarDump Collector:Show the outout of DebuggerUtility::vardump() in the DebugBar
+vardump = 1
