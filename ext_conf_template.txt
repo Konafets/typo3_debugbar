@@ -16,7 +16,7 @@ time = 1
 # cat=general/enable/7; type=boolean; label=Enable Exception Collector
 exceptions = 1
 
-# cat=general/enable/8; type=boolean; label=Enable Memmory Usage Collector
+# cat=general/enable/8; type=boolean; label=Enable Memory Usage Collector
 memory = 1
 
 # cat=general/enable/9; type=boolean; label=Enable Database Collector:Show database queries and bindings
