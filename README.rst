@@ -131,10 +131,10 @@ statement.
    :alt: DatabasePane
 
 Info: The extension uses the *connectToDB* hook to
-inject `Doctrine\DBAL\Logging\DebugStack` as a logger to the
+inject ``Doctrine\DBAL\Logging\DebugStack`` as a logger to the
 connection. At the end of the rendering process it retrieves the Logger
 and shows the logged queries. Its important to understand, that the
-extension adds `Doctrine\DBAL\Logging\DebugStack` in any case, even if
+extension adds ``Doctrine\DBAL\Logging\DebugStack`` in any case, even if
 its not shown in the frontend. This is due to log *all* queries from the
 very beginning ... but at that point the BE User is not initialized yet
 and its unclear if the DebugBar is enabled or not. Classical
@@ -144,7 +144,7 @@ VarDump
 --------
 
 Everybody knows the output of DebugUtility::var_dump() ... and everybody knows that it breaks the layout. Lets move the output
-to the TYPO3 Debugbar. Use `Konafets\TYPO3DebugBar\Overrides\DebuggerUtility::var_dump($variable)` and get an output like this:
+to the TYPO3 Debugbar. Use ``Konafets\TYPO3DebugBar\Overrides\DebuggerUtility::var_dump($variable)`` and get an output like this:
 
 .. figure:: https://raw.githubusercontent.com/konafets/typo3_debugbar/develop/Documentation/Images/VarDumpPane.png
    :alt: VarDumpPane
