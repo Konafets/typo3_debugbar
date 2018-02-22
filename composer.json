@@ -16,7 +16,7 @@
     "maximebf/debugbar": "^1.15"
   },
   "replace": {
-    "typo_debugbar": "self.version"
+    "typo3_debugbar": "self.version"
   },
   "autoload": {
     "psr-4": {
