@@ -1,11 +1,5 @@
 <?php namespace Konafets\TYPO3DebugBar;
 
-use Konafets\TYPO3DebugBar\DataCollectors\AuthCollector;
-use Konafets\TYPO3DebugBar\DataCollectors\InfoCollector;
-use Konafets\TYPO3DebugBar\DataCollectors\MySqliCollector;
-use Konafets\TYPO3DebugBar\DataCollectors\SessionCollector;
-use Konafets\TYPO3DebugBar\DataCollectors\Typo3Collector;
-use Konafets\TYPO3DebugBar\DataCollectors\TypoScriptCollector;
 use DebugBar\DataCollector\ExceptionsCollector;
 use DebugBar\DataCollector\MemoryCollector;
 use DebugBar\DataCollector\MessagesCollector;
@@ -13,13 +7,16 @@ use DebugBar\DataCollector\PhpInfoCollector;
 use DebugBar\DataCollector\TimeDataCollector;
 use DebugBar\DebugBar;
 use DebugBar\DebugBarException;
-use DebugBar\JavascriptRenderer;
 use Exception;
+use Konafets\TYPO3DebugBar\DataCollectors\AuthCollector;
+use Konafets\TYPO3DebugBar\DataCollectors\InfoCollector;
+use Konafets\TYPO3DebugBar\DataCollectors\MySqliCollector;
+use Konafets\TYPO3DebugBar\DataCollectors\SessionCollector;
+use Konafets\TYPO3DebugBar\DataCollectors\Typo3Collector;
 use Konafets\TYPO3DebugBar\DataCollectors\VarDumpCollector;
 use TYPO3\CMS\Backend\FrontendBackendUserAuthentication;
 use TYPO3\CMS\Core\Page\PageRenderer;
 use TYPO3\CMS\Core\SingletonInterface;
-use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Object\ObjectManager;
 use TYPO3\CMS\Extensionmanager\Utility\ConfigurationUtility;
@@ -29,15 +26,9 @@ class Typo3DebugBar extends DebugBar implements SingletonInterface
 {
 
     const EXTENSION_KEY = 'typo3_debugbar';
-    const DEFAULT_CSS_STYLE_FILENAME = 'debugbar.css';
-    const CUSTOM_CSS_STYLE_FILENAME = 'typo3_debugbar.css';
-    const DEFAULT_JS_STYLE_FILENAME = 'debugbar.js';
 
     /** @var ObjectManager */
     protected $objectManager;
-
-    /** @var string */
-    protected $extensionPath = '';
 
     /** @var array */
     protected $extensionConfiguration;
@@ -47,21 +38,6 @@ class Typo3DebugBar extends DebugBar implements SingletonInterface
 
     /** @var null|boolean */
     protected $enabled = null;
-
-    /** @var JavascriptRenderer */
-    protected $javascriptRenderer;
-
-    /** @var string */
-    protected $pathToCssResourceFolder = '';
-
-    /** @var string */
-    protected $pathToJsResourceFolder = '';
-
-    /** @var array */
-    protected $cssAssets = [];
-
-    /** @var array */
-    protected $jsAssets = [];
 
     /** @var FrontendBackendUserAuthentication */
     protected $backendUser;
@@ -75,10 +51,6 @@ class Typo3DebugBar extends DebugBar implements SingletonInterface
         $this->extensionConfiguration = $this->objectManager
                                                 ->get(ConfigurationUtility::class)
                                                 ->getCurrentConfiguration(self::EXTENSION_KEY);
-        $this->extensionPath = ExtensionManagementUtility::siteRelPath(self::EXTENSION_KEY);
-
-        $this->pathToCssResourceFolder = $this->extensionPath . 'Resources/Public/Css/';
-        $this->pathToJsResourceFolder = $this->extensionPath . 'Resources/Public/JavaScript/';
         $this->backendUser = $backendUser;
     }
 
@@ -93,10 +65,6 @@ class Typo3DebugBar extends DebugBar implements SingletonInterface
 
         /** @var DebugBar $debugBar */
         $debugBar = $this;
-
-        $this->setDefaultAssets();
-
-        $this->javascriptRenderer = $debugBar->getJavascriptRenderer();
 
         if ($this->shouldCollect('info')) {
             try {
@@ -192,8 +160,6 @@ class Typo3DebugBar extends DebugBar implements SingletonInterface
         if ($this->shouldCollect('db')) {
             try {
                 $this->addCollector(new MySqliCollector());
-                $this->cssAssets[] = $this->pathToCssResourceFolder . 'sqlqueries/widget.css';
-                $this->jsAssets[] = $this->pathToJsResourceFolder . 'sqlqueries/widget.js';
             } catch (DebugBarException $e) {
                 $this->addThrowable(
                     new Exception('Can not add MySqliCollector to TYPO3 DebugBar:' . $e->getMessage(), $e->getCode(), $e)
@@ -204,7 +170,6 @@ class Typo3DebugBar extends DebugBar implements SingletonInterface
         if ($this->shouldCollect('vardump')) {
             try {
                 $this->addCollector(new VarDumpCollector());
-                $this->jsAssets[] = $this->pathToJsResourceFolder . 'generic/widget.js';
             } catch (DebugBarException $e) {
                 $this->addThrowable(
                     new Exception('Can not add VarDumpCollector to TYPO3 DebugBar:' . $e->getMessage(), $e->getCode(), $e)
@@ -275,21 +240,13 @@ class Typo3DebugBar extends DebugBar implements SingletonInterface
             return;
         }
 
-        $this->javascriptRenderer->dumpCssAssets($this->cssAssets[0]);
-        $this->javascriptRenderer->dumpJsAssets($this->jsAssets[0]);
-
-        foreach ($this->cssAssets as $cssAsset) {
-            $pageRenderer->addHeaderData(sprintf('<link href="%s" rel="stylesheet" type="text/css">', $cssAsset));
-        }
-
-        foreach ($this->jsAssets as $jsAsset) {
-            $pageRenderer->addHeaderData(sprintf('<script src="%s" type="text/javascript"></script>', $jsAsset));
-        }
+        $head = $this->getAssetRenderer()->renderHead();
+        $pageRenderer->addHeaderData($head);
     }
 
     public function injectDebugBar(TypoScriptFrontendController $typoScriptFrontendController)
     {
-        $typoScriptFrontendController->content = str_ireplace('</body>', $this->javascriptRenderer->render() . '</body>', $typoScriptFrontendController->content);
+        $typoScriptFrontendController->content = str_ireplace('</body>', $this->getAssetRenderer()->render() . '</body>', $typoScriptFrontendController->content);
     }
 
     /**
@@ -308,18 +265,6 @@ class Typo3DebugBar extends DebugBar implements SingletonInterface
     private function getBackendUser()
     {
         return $this->backendUser;
-    }
-
-    private function setDefaultAssets()
-    {
-        $this->cssAssets = [
-            0 => $this->pathToCssResourceFolder . self::DEFAULT_CSS_STYLE_FILENAME,
-            1 => $this->pathToCssResourceFolder . self::CUSTOM_CSS_STYLE_FILENAME,
-        ];
-
-        $this->jsAssets = [
-            0 => $this->pathToJsResourceFolder . self::DEFAULT_JS_STYLE_FILENAME,
-        ];
     }
 
     private function isAdminLoggedIn()
@@ -395,5 +340,21 @@ class Typo3DebugBar extends DebugBar implements SingletonInterface
             $collector = $this->getCollector('vardump');
             $collector->addVarDump($item);
         }
+    }
+
+    /**
+     * Returns a JavascriptRenderer for this instance
+     *
+     * @param string $baseUrl
+     * @param string $basePath
+     * @return AssetsRenderer
+     */
+    public function getAssetRenderer($baseUrl = null, $basePath = null)
+    {
+        if ($this->jsRenderer === null) {
+            $this->jsRenderer = new AssetsRenderer($this, $baseUrl, $basePath);
+        }
+
+        return $this->jsRenderer;
     }
 }
