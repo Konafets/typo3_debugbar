@@ -27,8 +27,8 @@ class AssetsRenderer extends JavascriptRenderer
         parent::__construct($debugBar, $baseUrl, $basePath);
         $extensionPath = ExtensionManagementUtility::extPath(Typo3DebugBar::EXTENSION_KEY);
 
-        $this->pathToCssAssetFile = 'uploads/tx_typo3debugbar/css_assets.css';
-        $this->pathToJsAssetFile = 'uploads/tx_typo3debugbar/js_assets.js';
+        $this->pathToCssAssetFile = 'typo3temp/tx_typo3_debugbar_styles.css';
+        $this->pathToJsAssetFile = 'typo3temp/tx_typo3_debugbar_javascript.js';
 
         $this->cssVendors['fontawesome'] = $extensionPath . 'Resources/Public/vendor/font-awesome/style.css';
         $this->cssFiles['typo3'] = $extensionPath . self::PATH_TO_STYLES . self::CUSTOM_CSS_STYLE_FILENAME;
