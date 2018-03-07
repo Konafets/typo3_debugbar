@@ -123,12 +123,20 @@ And start/stop timing:
 Database
 --------
 
-This pane shows all issued queries of the connection with the name *Default*. Is there is no connection with this name, the first connection of the `ConnectionPool` will be used. Per default, the statements were shown as Prepared Statements, meaning the placeholders are inside the statement while the actual values are in a hidden table below each statement. To see them, click on the statement.
+This pane shows all issued queries of the connection with the name *Default*. Is there is no connection with this name, the first connection of the ``ConnectionPool`` will be used.
+
+With placeholders
+^^^^^^^^^^^^^^^^^
+
+Per default, the statements were shown as Prepared Statements, meaning the placeholders are inside the statement while the actual values are in a hidden table below each statement. To see them, click on the statement.
 
 .. figure:: https://raw.githubusercontent.com/konafets/typo3_debugbar/develop/Documentation/Images/DatabasePane.gif
    :alt: DatabasePane
 
-To see the values directly inside the statement, activate this inside the extension settings via the `with_params` option.
+With params
+^^^^^^^^^^^
+
+To render the values directly inside the statements, activate the option ``with_params`` in the extension settings.
 
 Info: The extension uses the *connectToDB* hook to
 inject ``Doctrine\DBAL\Logging\DebugStack`` as a logger to the
