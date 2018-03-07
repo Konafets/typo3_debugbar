@@ -1,5 +1,6 @@
 <?php namespace Konafets\TYPO3DebugBar\DataCollectors;
 
+use DebugBar\DataCollector\AssetProvider;
 use DebugBar\DataCollector\DataCollectorInterface;
 use DebugBar\DataCollector\Renderable;
 use DebugBar\DataCollector\TimeDataCollector;
@@ -13,17 +14,19 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
  * @package Konafets\TYPO3DebugBar\DataCollectors
  * @author Stefano Kowalke <info@arroba-it.de>
  */
-class MySqliCollector extends BaseCollector implements DataCollectorInterface, Renderable
+class MySqliCollector extends BaseCollector implements DataCollectorInterface, Renderable, AssetProvider
 {
 
-    protected $connections = [];
+    const DEFAULT_CONNECTION = 'Default';
 
+    /** @var bool */
     protected $renderSqlWithParams = false;
-
-    protected $sqlQuotationChar = '<>';
 
     /** @var DebugStack $sqlLogger */
     protected $sqlLogger;
+
+    /** @var \TYPO3\CMS\Core\Database\Connection */
+    protected $connection;
 
     /**
      * The constructor
@@ -35,7 +38,45 @@ class MySqliCollector extends BaseCollector implements DataCollectorInterface, R
     {
         parent::__construct();
 
+        $this->connection = $this->getDefaultConnection();
         $this->sqlLogger = $this->getSqlLoggerFromDatabaseConfiguration();
+    }
+
+    /**
+     * @return mixed
+     */
+    public static function getDefaultConnection()
+    {
+        $connectionPool = GeneralUtility::makeInstance(ConnectionPool::class);
+        $connections = $connectionPool->getConnectionNames();
+        $connectionName = self::DEFAULT_CONNECTION;
+
+        if (! in_array($connectionName, $connections)) {
+            list($connectionName) = $connections;
+        }
+
+        $connection = $connectionPool->getConnectionByName($connectionName);
+
+        return $connection;
+    }
+
+    /**
+     * Renders the SQL of traced statements with params embeded
+     *
+     * @param bool $enabled
+     * @param string $quotationChar
+     */
+    public function setRenderSqlWithParams($enabled = true)
+    {
+        $this->renderSqlWithParams = $enabled;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isSqlRenderedWithParams()
+    {
+        return $this->renderSqlWithParams;
     }
 
     /**
@@ -52,12 +93,17 @@ class MySqliCollector extends BaseCollector implements DataCollectorInterface, R
         foreach ($queries as $query) {
             $totalTime += $query['executionMS'];
 
+            if ($this->isSqlRenderedWithParams()) {
+                $this->addParamsToSql($query['sql'], $query['params']);
+                unset($query['params']);
+            }
+
             $statements[] = [
                 'sql' => $query['sql'],
                 'params' => $query['params'],
                 'duration' => $query['executionMS'],
                 'duration_str' => $this->formatDuration($query['executionMS']),
-                'connection' => key($this->connections),
+                'connection' => $this->connection->getDatabase(),
             ];
         }
 
@@ -106,17 +152,60 @@ class MySqliCollector extends BaseCollector implements DataCollectorInterface, R
 
     private function getSqlLoggerFromDatabaseConfiguration()
     {
-        $this->getConnections();
+        if ($this->connection === null) {
+            $this->connection = $this->getDefaultConnection();
+        }
 
-        return $this->connections['Default']->getConfiguration()->getSQLLogger();
+        return $this->connection->getConfiguration()->getSQLLogger();
     }
 
-    private function getConnections()
+    /**
+     * @param string $sql
+     * @param array $params
+     */
+    private function addParamsToSql(&$sql, array $params)
     {
-        $connectionPool = GeneralUtility::makeInstance(ConnectionPool::class);
+        foreach ($params as $key => $param) {
+            if (is_array($param)) {
+                $param = $param[0];
+            }
 
-        foreach ($connectionPool->getConnectionNames() as $connectionName) {
-            $this->connections[$connectionName] = $connectionPool->getConnectionByName($connectionName);
+            $regex = is_numeric($key)
+                ? "/\?(?=(?:[^'\\\']*'[^'\\\']*')*[^'\\\']*$)/"
+                : "/:{$key}(?=(?:[^'\\\']*'[^'\\\']*')*[^'\\\']*$)/";
+            $sql = preg_replace($regex, $this->connection->quote($param), $sql, 1);
         }
+    }
+
+    /**
+     * Returns an array with the following keys:
+     *  - base_path
+     *  - base_url
+     *  - css: an array of filenames
+     *  - js: an array of filenames
+     *  - inline_css: an array map of content ID to inline CSS content (not including <style> tag)
+     *  - inline_js: an array map of content ID to inline JS content (not including <script> tag)
+     *  - inline_head: an array map of content ID to arbitrary inline HTML content (typically
+     *        <style>/<script> tags); it must be embedded within the <head> element
+     *
+     * All keys are optional.
+     *
+     * Ideally, you should store static assets in filenames that are returned via the normal css/js
+     * keys.  However, the inline asset elements are useful when integrating with 3rd-party
+     * libraries that require static assets that are only available in an inline format.
+     *
+     * The inline content arrays require special string array keys:  the caller of this function
+     * will use them to deduplicate content.  This is particularly useful if multiple instances of
+     * the same asset provider are used.  Inline assets from all collectors are merged together into
+     * the same array, so these content IDs effectively deduplicate the inline assets.
+     *
+     * @return array
+     */
+    function getAssets()
+    {
+        return [
+            'css' => 'widgets/sqlqueries/widget.css',
+            'js' => 'widgets/sqlqueries/widget.js',
+        ];
     }
 }

@@ -22,14 +22,17 @@ memory = 1
 # cat=general/enable/9; type=boolean; label=Enable Database Collector:Show database queries and bindings
 db = 1
 
-# cat=general/enable/10; type=boolean; label=Enable Auth Collector:Display information about authenticated user
+# cat=general/enable/10; type=boolean; label=Render SQL with the parameters substituted
+with_params = 0
+
+# cat=general/enable/11; type=boolean; label=Enable Auth Collector:Display information about authenticated user
 auth = 1
 
-# cat=general/enable/11; type=boolean; label=Enable Session Collector:Display session data
+# cat=general/enable/12; type=boolean; label=Enable Session Collector:Display session data
 session = 1
 
-# cat=general/enable/12; type=boolean; label=Enable TYPO3 Collector:TYPO3 version and environment
+# cat=general/enable/13; type=boolean; label=Enable TYPO3 Collector:TYPO3 version and environment
 typo3 = 1
 
-# cat=general/enable/13; type=boolean; label=Enable VarDump Collector:Show the outout of DebuggerUtility::vardump() in the DebugBar
+# cat=general/enable/14; type=boolean; label=Enable VarDump Collector:Show the outout of DebuggerUtility::vardump() in the DebugBar
 vardump = 1
