@@ -159,7 +159,9 @@ class Typo3DebugBar extends DebugBar implements SingletonInterface
 
         if ($this->shouldCollect('db')) {
             try {
-                $this->addCollector(new MySqliCollector());
+                $mySqliCollector = new MySqliCollector();
+                $mySqliCollector->setRenderSqlWithParams($this->hasRenderWithParams());
+                $this->addCollector($mySqliCollector);
             } catch (DebugBarException $e) {
                 $this->addThrowable(
                     new Exception('Can not add MySqliCollector to TYPO3 DebugBar:' . $e->getMessage(), $e->getCode(), $e)
@@ -218,6 +220,11 @@ class Typo3DebugBar extends DebugBar implements SingletonInterface
     public function shouldCollect($name)
     {
         return (bool) $this->extensionConfiguration[$name]['value'];
+    }
+
+    public function hasRenderWithParams()
+    {
+        return (bool) $this->extensionConfiguration['with_params']['value'];
     }
 
     public function isEnabled()

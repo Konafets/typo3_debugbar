@@ -5,10 +5,7 @@ use DebugBar\DataCollector\DataCollectorInterface;
 use DebugBar\DataCollector\Renderable;
 use DebugBar\DataCollector\TimeDataCollector;
 use Doctrine\DBAL\Logging\DebugStack;
-use Konafets\TYPO3DebugBar\AssetsRenderer;
-use Konafets\TYPO3DebugBar\Typo3DebugBar;
 use TYPO3\CMS\Core\Database\ConnectionPool;
-use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 /**
@@ -20,14 +17,16 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 class MySqliCollector extends BaseCollector implements DataCollectorInterface, Renderable, AssetProvider
 {
 
-    protected $connections = [];
+    const DEFAULT_CONNECTION = 'Default';
 
+    /** @var bool */
     protected $renderSqlWithParams = false;
-
-    protected $sqlQuotationChar = '<>';
 
     /** @var DebugStack $sqlLogger */
     protected $sqlLogger;
+
+    /** @var \TYPO3\CMS\Core\Database\Connection */
+    protected $connection;
 
     /**
      * The constructor
@@ -39,7 +38,45 @@ class MySqliCollector extends BaseCollector implements DataCollectorInterface, R
     {
         parent::__construct();
 
+        $this->connection = $this->getDefaultConnection();
         $this->sqlLogger = $this->getSqlLoggerFromDatabaseConfiguration();
+    }
+
+    /**
+     * @return mixed
+     */
+    public static function getDefaultConnection()
+    {
+        $connectionPool = GeneralUtility::makeInstance(ConnectionPool::class);
+        $connections = $connectionPool->getConnectionNames();
+        $connectionName = self::DEFAULT_CONNECTION;
+
+        if (! in_array($connectionName, $connections)) {
+            list($connectionName) = $connections;
+        }
+
+        $connection = $connectionPool->getConnectionByName($connectionName);
+
+        return $connection;
+    }
+
+    /**
+     * Renders the SQL of traced statements with params embeded
+     *
+     * @param bool $enabled
+     * @param string $quotationChar
+     */
+    public function setRenderSqlWithParams($enabled = true)
+    {
+        $this->renderSqlWithParams = $enabled;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isSqlRenderedWithParams()
+    {
+        return $this->renderSqlWithParams;
     }
 
     /**
@@ -56,12 +93,17 @@ class MySqliCollector extends BaseCollector implements DataCollectorInterface, R
         foreach ($queries as $query) {
             $totalTime += $query['executionMS'];
 
+            if ($this->isSqlRenderedWithParams()) {
+                $this->addParamsToSql($query['sql'], $query['params']);
+                unset($query['params']);
+            }
+
             $statements[] = [
                 'sql' => $query['sql'],
                 'params' => $query['params'],
                 'duration' => $query['executionMS'],
                 'duration_str' => $this->formatDuration($query['executionMS']),
-                'connection' => key($this->connections),
+                'connection' => $this->connection->getDatabase(),
             ];
         }
 
@@ -110,17 +152,28 @@ class MySqliCollector extends BaseCollector implements DataCollectorInterface, R
 
     private function getSqlLoggerFromDatabaseConfiguration()
     {
-        $this->getConnections();
+        if ($this->connection === null) {
+            $this->connection = $this->getDefaultConnection();
+        }
 
-        return $this->connections['Default']->getConfiguration()->getSQLLogger();
+        return $this->connection->getConfiguration()->getSQLLogger();
     }
 
-    private function getConnections()
+    /**
+     * @param string $sql
+     * @param array $params
+     */
+    private function addParamsToSql(&$sql, array $params)
     {
-        $connectionPool = GeneralUtility::makeInstance(ConnectionPool::class);
+        foreach ($params as $key => $param) {
+            if (is_array($param)) {
+                $param = $param[0];
+            }
 
-        foreach ($connectionPool->getConnectionNames() as $connectionName) {
-            $this->connections[$connectionName] = $connectionPool->getConnectionByName($connectionName);
+            $regex = is_numeric($key)
+                ? "/\?(?=(?:[^'\\\']*'[^'\\\']*')*[^'\\\']*$)/"
+                : "/:{$key}(?=(?:[^'\\\']*'[^'\\\']*')*[^'\\\']*$)/";
+            $sql = preg_replace($regex, $this->connection->quote($param), $sql, 1);
         }
     }
 
@@ -150,11 +203,9 @@ class MySqliCollector extends BaseCollector implements DataCollectorInterface, R
      */
     function getAssets()
     {
-        $path = ExtensionManagementUtility::extPath(Typo3DebugBar::EXTENSION_KEY);
-
         return [
-            'css' => $path . AssetsRenderer::PATH_TO_STYLES . '/sqlqueries/widget.css',
-            'js' => $path . AssetsRenderer::PATH_TO_JAVASCRIPT . '/sqlqueries/widget.js',
+            'css' => 'widgets/sqlqueries/widget.css',
+            'js' => 'widgets/sqlqueries/widget.js',
         ];
     }
 }
