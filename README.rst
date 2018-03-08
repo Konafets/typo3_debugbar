@@ -113,6 +113,7 @@ And start/stop timing:
     debugBar()->measure('My long operation', function() {
         // Do something…
     });
+    debugbar_debug($value);
 
 or even shorter:
 
