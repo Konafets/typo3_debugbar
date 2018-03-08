@@ -47,8 +47,8 @@ class AssetsRenderer extends JavascriptRenderer
         $this->dumpJsAssets($this->pathToJsAssetFile);
 
         $html = '';
-        $html .= "<link href='{$this->pathToCssAssetFile}' rel='stylesheet' type='text/css'>\n";
-        $html .= "<script src='{$this->pathToJsAssetFile}' type='text/javascript'></script>\n";
+        $html .= "<link href='/{$this->pathToCssAssetFile}' rel='stylesheet' type='text/css'>\n";
+        $html .= "<script src='/{$this->pathToJsAssetFile}' type='text/javascript'></script>\n";
 
         if ($this->isJqueryNoConflictEnabled()) {
             $html .= '<script type="text/javascript">jQuery.noConflict(true);</script>' . "\n";
