@@ -21,7 +21,10 @@
   "autoload": {
     "psr-4": {
       "Konafets\\TYPO3DebugBar\\": "Classes"
-    }
+    },
+    "files": [
+      "helpers.php"
+    ]
   },
   "extra": {
     "typo3/cms": {
