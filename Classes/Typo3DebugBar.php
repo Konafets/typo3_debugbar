@@ -22,6 +22,19 @@ use TYPO3\CMS\Extbase\Object\ObjectManager;
 use TYPO3\CMS\Extensionmanager\Utility\ConfigurationUtility;
 use TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController;
 
+/**
+ * Debugbar subclass
+ *
+ * @method void emergency($message)
+ * @method void alert($message)
+ * @method void criteria($message)
+ * @method void error($message)
+ * @method void warning($message)
+ * @method void notice($message)
+ * @method void info($message)
+ * @method void debug($message)
+ * @method void log($message)
+ */
 class Typo3DebugBar extends DebugBar implements SingletonInterface
 {
 
@@ -217,6 +230,54 @@ class Typo3DebugBar extends DebugBar implements SingletonInterface
         }
     }
 
+    /**
+     * Adds a measure
+     *
+     * @param $label
+     * @param $start
+     * @param $end
+     * @throws DebugBarException
+     */
+    public function addMeasure($label, $start, $end)
+    {
+        if ($this->hasCollector('time')) {
+            /** @var \DebugBar\DataCollector\TimeDataCollector $collector */
+            $collector = $this->getCollector('time');
+            $collector->addMeasure($label, $start, $end);
+        }
+    }
+
+    /**
+     * Utility function to measure the execution of a Closure
+     *
+     * @param $label
+     * @param \Closure $closure
+     * @throws DebugBarException
+     */
+    public function measure($label, \Closure $closure)
+    {
+        if ($this->hasCollector('time')) {
+            /** @var \DebugBar\DataCollector\TimeDataCollector $collector */
+            $collector = $this->getCollector('time');
+            $collector->measure($label, $closure);
+        }
+    }
+
+    /**
+     * Adds an exception to be profiled in the debug bar
+     *
+     * @param Exception $e
+     * @throws DebugBarException
+     */
+    public function addThrowable($e)
+    {
+        if ($this->hasCollector('exceptions')) {
+            /** @var \DebugBar\DataCollector\ExceptionsCollector $collector */
+            $collector = $this->getCollector('exceptions');
+            $collector->addThrowable($e);
+        }
+    }
+
     public function shouldCollect($name)
     {
         return (bool) $this->extensionConfiguration[$name]['value'];
@@ -281,21 +342,6 @@ class Typo3DebugBar extends DebugBar implements SingletonInterface
         }
 
         return false;
-    }
-
-    /**
-     * Adds an exception to be profiled in the debug bar
-     *
-     * @param Exception $e
-     * @throws DebugBarException
-     */
-    public function addThrowable($e)
-    {
-        if ($this->hasCollector('exceptions')) {
-            /** @var \DebugBar\DataCollector\ExceptionsCollector $collector */
-            $collector = $this->getCollector('exceptions');
-            $collector->addThrowable($e);
-        }
     }
 
     /**

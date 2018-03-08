@@ -71,8 +71,7 @@ Use it everywhere
 -----------------
 
 The Typo3DebugBar implements the ``SingletonInterface``, therefore you
-can get the same instance via
-``GeneralUtility::makeInstance(Typo3DebugBar::class)``. This opens the
+can get the same instance via ``debugbar()``. This opens the
 possibility to interact with the DebugBar from within TYPO3.
 
 Log Exceptions
@@ -83,8 +82,7 @@ Log Exceptions
     try {
         throw new Exception('foobar');
     } catch (Exception $e) {
-        $debugBar = GeneralUtility::makeInstance(Typo3DebugBar::class);
-        $debugBar->addThrowable($e);
+        debugBar()->addThrowable($e);
     }
 
 These will be shown in the Exception pane.
@@ -94,12 +92,10 @@ Add messages
 
 .. code:: php
 
-    $debugBar = GeneralUtility::makeInstance(Typo3DebugBar::class);
-
-    $debugBar->info($object);
-    $debugBar->error('Error!');
-    $debugBar->warning('Watch out…');
-    $debugBar->addMessage('Another message', 'mylabel');
+    debugBar()->info($object);
+    debugBar()->error('Error!');
+    debugBar()->warning('Watch out…');
+    debugBar()->addMessage('Another message', 'mylabel');
 
 .. figure:: https://raw.githubusercontent.com/konafets/typo3_debugbar/develop/Documentation/Images/MessagesPane.png
    :alt: MessagesPane
@@ -111,12 +107,22 @@ And start/stop timing:
 
 .. code:: php
 
-    $debugBar = GeneralUtility::makeInstance(Typo3DebugBar::class);
+    debugBar()->startMeasure('render', 'Time for rendering');
+    debugBar()->stopMeasure('render');
+    debugBar()->addMeasure('now', TYPO3_START, microtime(true));
+    debugBar()->measure('My long operation', function() {
+        // Do something…
+    });
+    debugbar_debug($value);
 
-    $debugBar->startMeasure('render', 'Time for rendering');
-    $debugBar->stopMeasure('render');
-    $debugBar->addMeasure('now', TYPO3_START, microtime(true));
-    $debugBar->measure('My long operation', function() {
+or even shorter:
+
+.. code:: php
+
+    startMeasure('render', 'Time for rendering');
+    stopMeasure('render');
+    addMeasure('now', TYPO3_START, microtime(true));
+    measure('My long operation', function() {
         // Do something…
     });
 
