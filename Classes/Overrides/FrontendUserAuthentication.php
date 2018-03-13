@@ -1,4 +1,4 @@
-<?php namespace Konafets\TYPO3DebugBar\Overrides;
+<?php namespace Konafets\Typo3Debugbar\Overrides;
 
 use TYPO3\CMS\Frontend\Authentication\FrontendUserAuthentication as BaseFrontendUserAuthentication;
 

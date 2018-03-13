@@ -1,6 +1,6 @@
 <?php
 
-use Konafets\TYPO3DebugBar\Typo3DebugBar;
+use Konafets\Typo3Debugbar\Typo3DebugBar;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 if (! function_exists('debugbar')) {

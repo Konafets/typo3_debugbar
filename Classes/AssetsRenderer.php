@@ -1,4 +1,4 @@
-<?php namespace Konafets\TYPO3DebugBar;
+<?php namespace Konafets\Typo3Debugbar;
 
 use DebugBar\DebugBar;
 use DebugBar\JavascriptRenderer;

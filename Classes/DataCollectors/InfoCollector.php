@@ -1,11 +1,11 @@
-<?php namespace Konafets\TYPO3DebugBar\DataCollectors;
+<?php namespace Konafets\Typo3Debugbar\DataCollectors;
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 /**
  * Class InfoCollector
  *
- * @package Konafets\TYPO3DebugBar\DataCollectors
+ * @package Konafets\Typo3Debugbar\DataCollectors
  * @author Stefano Kowalke <info@arroba-it.de>
  */
 class InfoCollector extends BaseCollector
