@@ -1,7 +1,7 @@
-<?php namespace Konafets\TYPO3DebugBar\Overrides;
+<?php namespace Konafets\Typo3Debugbar\Overrides;
 
 use DebugBar\DebugBarException;
-use Konafets\TYPO3DebugBar\Typo3DebugBar;
+use Konafets\Typo3Debugbar\Typo3DebugBar;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Utility\DebuggerUtility as BaseDebuggerUtility;
 

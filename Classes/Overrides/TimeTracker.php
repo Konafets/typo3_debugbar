@@ -1,5 +1,5 @@
 <?php
-namespace Konafets\TYPO3DebugBar\Overrides;
+namespace Konafets\Typo3Debugbar\Overrides;
 
 use TYPO3\CMS\Core\TimeTracker\TimeTracker as BaseTimeTracker;
 use TYPO3\CMS\Core\Utility\GeneralUtility;

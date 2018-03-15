@@ -1,4 +1,4 @@
-<?php namespace Konafets\TYPO3DebugBar;
+<?php namespace Konafets\Typo3Debugbar;
 
 use DebugBar\DataCollector\ExceptionsCollector;
 use DebugBar\DataCollector\MemoryCollector;
@@ -8,12 +8,12 @@ use DebugBar\DataCollector\TimeDataCollector;
 use DebugBar\DebugBar;
 use DebugBar\DebugBarException;
 use Exception;
-use Konafets\TYPO3DebugBar\DataCollectors\AuthCollector;
-use Konafets\TYPO3DebugBar\DataCollectors\InfoCollector;
-use Konafets\TYPO3DebugBar\DataCollectors\MySqliCollector;
-use Konafets\TYPO3DebugBar\DataCollectors\SessionCollector;
-use Konafets\TYPO3DebugBar\DataCollectors\Typo3Collector;
-use Konafets\TYPO3DebugBar\DataCollectors\VarDumpCollector;
+use Konafets\Typo3Debugbar\DataCollectors\AuthCollector;
+use Konafets\Typo3Debugbar\DataCollectors\InfoCollector;
+use Konafets\Typo3Debugbar\DataCollectors\MySqliCollector;
+use Konafets\Typo3Debugbar\DataCollectors\SessionCollector;
+use Konafets\Typo3Debugbar\DataCollectors\Typo3Collector;
+use Konafets\Typo3Debugbar\DataCollectors\VarDumpCollector;
 use TYPO3\CMS\Backend\FrontendBackendUserAuthentication;
 use TYPO3\CMS\Core\Page\PageRenderer;
 use TYPO3\CMS\Core\SingletonInterface;

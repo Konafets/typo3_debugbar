@@ -1,7 +1,7 @@
-<?php namespace Konafets\TYPO3DebugBar;
+<?php namespace Konafets\Typo3Debugbar;
 
 use Doctrine\DBAL\Logging\DebugStack;
-use Konafets\TYPO3DebugBar\DataCollectors\MySqliCollector;
+use Konafets\Typo3Debugbar\DataCollectors\MySqliCollector;
 use TYPO3\CMS\Core\Page\PageRenderer;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController;

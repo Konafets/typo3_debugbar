@@ -1,11 +1,11 @@
-<?php namespace Konafets\TYPO3DebugBar\DataCollectors;
+<?php namespace Konafets\Typo3Debugbar\DataCollectors;
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 /**
  * Class InfoCollector
  *
- * @package Konafets\TYPO3DebugBar\DataCollectors
+ * @package Konafets\Typo3Debugbar\DataCollectors
  * @author Stefano Kowalke <info@arroba-it.de>
  */
 class InfoCollector extends BaseCollector
@@ -42,7 +42,8 @@ class InfoCollector extends BaseCollector
         $output[$this->extGetLL('info_type')] = $frontendController->type;
         $output[$this->extGetLL('info_groupList')] = $frontendController->gr_list;
         $output[$this->extGetLL('info_noCache')] = $this->extGetLL('info_noCache_' . ($frontendController->no_cache ? 'no' : 'yes'));
-        $output[$this->extGetLL('info_countUserInt')] = count($frontendController->config['INTincScript']);
+        $INTincScript = $frontendController->config['INTincScript'];
+        $output[$this->extGetLL('info_countUserInt')] = is_array($INTincScript) ? count($INTincScript) : 0;
 
         if (!empty($frontendController->fe_user->user['uid'])) {
             $output[$this->extGetLL('info_feuserName')] = htmlspecialchars($frontendController->fe_user->user['username']);

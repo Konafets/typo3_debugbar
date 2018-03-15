@@ -1,4 +1,4 @@
-<?php namespace Konafets\TYPO3DebugBar\DataCollectors;
+<?php namespace Konafets\Typo3Debugbar\DataCollectors;
 
 use DebugBar\DataCollector\AssetProvider;
 use DebugBar\DataCollector\DataCollectorInterface;
@@ -11,7 +11,7 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 /**
  * Class MySqliCollector
  *
- * @package Konafets\TYPO3DebugBar\DataCollectors
+ * @package Konafets\Typo3Debugbar\DataCollectors
  * @author Stefano Kowalke <info@arroba-it.de>
  */
 class MySqliCollector extends BaseCollector implements DataCollectorInterface, Renderable, AssetProvider

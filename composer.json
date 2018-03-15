@@ -20,7 +20,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Konafets\\TYPO3DebugBar\\": "Classes"
+      "Konafets\\Typo3Debugbar\\": "Classes"
     },
     "files": [
       "helpers.php"

@@ -11,6 +11,8 @@ include the assets and itself into frontend output. It bootstraps some
 Collectors to work with TYPO3 and implements a couple custom
 DataCollectors, specific for TYPO3.
 
+**Attention**: Currently, the extension does only work with Composer based TYPO3 installations. I am working on it to make it compatible with classic installations of TYPO3.
+
 Read `the documentation <http://phpdebugbar.com/docs/>`__ for more
 configuration options.
 
@@ -158,7 +160,7 @@ VarDump
 --------
 
 Everybody knows the output of DebugUtility::var_dump() ... and everybody knows that it breaks the layout. Lets move the output
-to the TYPO3 Debugbar. Use ``Konafets\TYPO3DebugBar\Overrides\DebuggerUtility::var_dump($variable)`` and get an output like this:
+to the TYPO3 Debugbar. Use ``Konafets\Typo3Debugbar\Overrides\DebuggerUtility::var_dump($variable)`` and get an output like this:
 
 .. figure:: https://raw.githubusercontent.com/konafets/typo3_debugbar/develop/Documentation/Images/VarDumpPane.png
    :alt: VarDumpPane

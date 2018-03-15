@@ -1,4 +1,4 @@
-<?php namespace Konafets\TYPO3DebugBar\DataCollectors;
+<?php namespace Konafets\Typo3Debugbar\DataCollectors;
 
 use DebugBar\DataCollector\DataCollector;
 use DebugBar\DataCollector\DataCollectorInterface;

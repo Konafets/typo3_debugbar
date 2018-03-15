@@ -1,4 +1,4 @@
-<?php namespace Konafets\TYPO3DebugBar\DataCollectors;
+<?php namespace Konafets\Typo3Debugbar\DataCollectors;
 
 use DebugBar\DataCollector\DataCollectorInterface;
 use DebugBar\DataCollector\Renderable;
@@ -7,7 +7,7 @@ use TYPO3\CMS\Core\Utility\VersionNumberUtility;
 /**
  * Class EnvironmentCollector
  *
- * @package Konafets\TYPO3DebugBar\DataCollectors
+ * @package Konafets\Typo3Debugbar\DataCollectors
  * @author Stefano Kowalke <info@arroba-it.de>
  */
 class Typo3Collector extends BaseCollector implements DataCollectorInterface, Renderable
