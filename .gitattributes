@@ -1,0 +1,8 @@
+/build/ export-ignore
+/Libraries/ export-ignore
+/Resources/Private/ExtensionArtifacts/ export-ignore
+/.gitattributes export-ignore
+/.gitignore export-ignore
+/ext_emconf.php export-ignore
+/ext_icon.svg export-ignore
+/ext_localconf.php export-ignore
