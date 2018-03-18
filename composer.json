@@ -29,7 +29,7 @@
   "scripts": {
       "extension-create-libs": [
           "mkdir -p Libraries/temp",
-          "if [ ! -f Libraries/debugbar.phar ]; then cd Libraries/temp && git clone git@github.com:maximebf/php-debugbar.git && cd php-debugbar && composer install && composer config classmap-authoritative true && composer config prepend-autoloader true && composer dump-autoload -o; fi",
+          "if [ ! -f Libraries/debugbar.phar ]; then cd Libraries/temp && git clone git@github.com:maximebf/php-debugbar.git && cd php-debugbar && composer require doctrine/instantiator && composer install && composer config classmap-authoritative true && composer config prepend-autoloader true && composer dump-autoload -o; fi",
           "[ -f Libraries/debugbar.phar ] || cd Libraries/temp/php-debugbar && php ../../../build/phar-builder.phar package --no-compression --include= --entry-point=vendor/autoload.php --name=debugbar.phar --output-dir=../../ -s .",
           "chmod -x Libraries/*.phar",
           "rm -rf Libraries/temp"
