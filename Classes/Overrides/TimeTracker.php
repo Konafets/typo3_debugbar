@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 namespace Konafets\Typo3Debugbar\Overrides;
 
 use TYPO3\CMS\Core\TimeTracker\TimeTracker as BaseTimeTracker;
@@ -11,7 +12,6 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
  */
 class TimeTracker extends BaseTimeTracker
 {
-
     /**
      * Print TypoScript parsing log
      *
