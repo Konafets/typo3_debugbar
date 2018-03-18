@@ -11,15 +11,13 @@ include the assets and itself into frontend output. It bootstraps some
 Collectors to work with TYPO3 and implements a couple custom
 DataCollectors, specific for TYPO3.
 
-**Attention**: Currently, the extension does only work with Composer based TYPO3 installations. I am working on it to make it compatible with classic installations of TYPO3.
-
 Read `the documentation <http://phpdebugbar.com/docs/>`__ for more
 configuration options.
 
 .. figure:: https://raw.githubusercontent.com/konafets/typo3_debugbar/develop/Documentation/Images/SQLView.png
    :alt: Screenshot
 
-Info: Use the DebugBar only in development. It can slow the
+**Info**: Use the DebugBar only in development. It can slow the
 application down (because it has to gather data). So when experiencing
 slowness, try disabling some of the collectors.
 
