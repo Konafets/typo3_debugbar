@@ -4,6 +4,10 @@ defined('TYPO3_MODE') or die('Access denied.');
 
 $extensionPath = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY);
 
+if (TYPO3\CMS\Core\Core\Bootstrap::usesComposerClassLoading() === false) {
+    require $extensionPath . 'Resources/Private/ExtensionArtifacts/autoload.php';
+}
+
 if (TYPO3_MODE === 'FE') {
     $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['tslib/class.tslib_fe.php']['connectToDB'][] =
         $extensionPath . 'Classes/Typo3DebugBarServiceProvider.php:Konafets\\Typo3Debugbar\\Typo3DebugBarServiceProvider->injectDbalLoggerToDbConnection';
