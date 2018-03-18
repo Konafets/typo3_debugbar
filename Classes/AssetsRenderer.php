@@ -1,4 +1,6 @@
-<?php namespace Konafets\Typo3Debugbar;
+<?php
+declare(strict_types=1);
+namespace Konafets\Typo3Debugbar;
 
 use DebugBar\DebugBar;
 use DebugBar\JavascriptRenderer;
@@ -6,7 +8,6 @@ use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
 class AssetsRenderer extends JavascriptRenderer
 {
-
     const PATH_TO_STYLES = 'Resources/Public/Css';
     const PATH_TO_JAVASCRIPT = 'Resources/Public/JavaScript';
     const CUSTOM_CSS_STYLE_FILENAME = '/typo3_debugbar.css';

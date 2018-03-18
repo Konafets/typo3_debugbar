@@ -1,22 +1,22 @@
-<?php namespace Konafets\Typo3Debugbar\DataCollectors;
+<?php
+declare(strict_types=1);
+namespace Konafets\Typo3Debugbar\DataCollectors;
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 /**
  * Class InfoCollector
  *
- * @package Konafets\Typo3Debugbar\DataCollectors
  * @author Stefano Kowalke <info@arroba-it.de>
  */
 class InfoCollector extends BaseCollector
 {
-
     /**
      * Called by the DebugBar when data needs to be collected
      *
      * @return array Collected data
      */
-    function collect()
+    public function collect()
     {
         $output = [];
         $frontendController = $this->getTypoScriptFrontendController();
@@ -60,7 +60,7 @@ class InfoCollector extends BaseCollector
      *
      * @return string
      */
-    function getName()
+    public function getName()
     {
         return 'info';
     }
@@ -71,7 +71,7 @@ class InfoCollector extends BaseCollector
      *
      * @return array
      */
-    function getWidgets()
+    public function getWidgets()
     {
         $name = $this->getName();
 
@@ -80,7 +80,7 @@ class InfoCollector extends BaseCollector
                 'icon' => 'info',
                 'widget' => 'PhpDebugBar.Widgets.VariableListWidget',
                 'map' => 'info',
-                "default" => '[]',
+                'default' => '[]',
             ],
         ];
     }
