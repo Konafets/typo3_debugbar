@@ -1,4 +1,6 @@
-<?php namespace Konafets\Typo3Debugbar\DataCollectors;
+<?php
+declare(strict_types=1);
+namespace Konafets\Typo3Debugbar\DataCollectors;
 
 use DebugBar\DataCollector\DataCollectorInterface;
 use DebugBar\DataCollector\Renderable;
@@ -7,18 +9,16 @@ use TYPO3\CMS\Core\Utility\VersionNumberUtility;
 /**
  * Class EnvironmentCollector
  *
- * @package Konafets\Typo3Debugbar\DataCollectors
  * @author Stefano Kowalke <info@arroba-it.de>
  */
 class Typo3Collector extends BaseCollector implements DataCollectorInterface, Renderable
 {
-
     /**
      * Called by the DebugBar when data needs to be collected
      *
      * @return array Collected data
      */
-    function collect()
+    public function collect()
     {
         return [
             'version' => VersionNumberUtility::getCurrentTypo3Version(),
@@ -32,7 +32,7 @@ class Typo3Collector extends BaseCollector implements DataCollectorInterface, Re
      *
      * @return string
      */
-    function getName()
+    public function getName()
     {
         return 'typo3';
     }
@@ -43,7 +43,7 @@ class Typo3Collector extends BaseCollector implements DataCollectorInterface, Re
      *
      * @return array
      */
-    function getWidgets()
+    public function getWidgets()
     {
         return [
             'version' => [
