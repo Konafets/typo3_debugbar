@@ -1,5 +1,5 @@
 <?php
-
+declare(strict_types=1);
 use Konafets\Typo3Debugbar\Typo3DebugBar;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
