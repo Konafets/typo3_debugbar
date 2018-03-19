@@ -9,14 +9,20 @@
       "role": "Developer"
     }
   ],
-  "license": ["GPL-2.0+"],
-  "keywords": ["typo3", "php", "debugging", "debugbar", "cms"],
+  "license": [
+    "GPL-2.0+"
+  ],
+  "keywords": [
+    "typo3",
+    "php",
+    "debugging",
+    "debugbar",
+    "cms"
+  ],
   "require": {
+    "php": ">=7.0.0 <7.3",
     "typo3/cms-core": ">=8.7.0 <9",
     "maximebf/debugbar": "^1.15"
-  },
-  "replace": {
-    "typo3_debugbar": "self.version"
   },
   "autoload": {
     "psr-4": {
@@ -26,35 +32,44 @@
       "helpers.php"
     ]
   },
+  "replace": {
+    "typo3_debugbar": "self.version",
+    "typo3-ter/typo3_debugbar": "self.version"
+  },
+  "config": {
+    "vendor-dir": ".Build/vendor"
+  },
   "scripts": {
-      "extension-create-libs": [
-          "mkdir -p Libraries/temp",
-          "if [ ! -f Libraries/debugbar.phar ]; then cd Libraries/temp && git clone git@github.com:maximebf/php-debugbar.git && cd php-debugbar && composer require doctrine/instantiator && composer install && composer config classmap-authoritative true && composer config prepend-autoloader true && composer dump-autoload -o; fi",
-          "[ -f Libraries/debugbar.phar ] || cd Libraries/temp/php-debugbar && php ../../../build/phar-builder.phar package --no-compression --include= --entry-point=vendor/autoload.php --name=debugbar.phar --output-dir=../../ -s .",
-          "chmod -x Libraries/*.phar",
-          "rm -rf Libraries/temp"
-      ],
-      "extension-build": [
-          "@extension-create-libs"
-      ],
-      "extension-release": [
-          "@extension-build",
-          "rm -rf Tests/",
-          "rm .gitattributes",
-          "rm .gitignore",
-          "rm .php_cs.dist",
-          "rm .styleci.yml",
-          "rm phpunit.xml.dist",
-          "rm appveyor.yml",
-          "rm .travis.yml"
-      ],
-      "extension-clean": [
-          "rm -rf Libraries"
-      ]
+    "set-version": [
+      "Konafets\\Typo3Debugbar\\Composer\\InstallerScripts::setVersion"
+    ],
+    "extension-create-libs": [
+      "mkdir -p Libraries/temp",
+      "if [ ! -f Libraries/debugbar.phar ]; then cd Libraries/temp && git clone git@github.com:maximebf/php-debugbar.git && cd php-debugbar && composer require doctrine/instantiator && composer install && composer config classmap-authoritative true && composer config prepend-autoloader true && composer dump-autoload -o; fi",
+      "[ -f Libraries/debugbar.phar ] || cd Libraries/temp/php-debugbar && php ../../../build/phar-builder.phar package --no-compression --include= --entry-point=vendor/autoload.php --name=debugbar.phar --output-dir=../../ -s .",
+      "chmod -x Libraries/*.phar",
+      "rm -rf Libraries/temp"
+    ],
+    "extension-build": [
+      "@extension-create-libs"
+    ],
+    "extension-release": [
+      "@extension-build",
+      "rm -r .github",
+      "rm -r build",
+      "rm .gitattributes",
+      "rm .gitignore",
+      "rm .styleci.yml",
+      "rm .travis.yml"
+    ],
+    "extension-clean": [
+      "rm -rf Libraries"
+    ]
   },
   "extra": {
     "typo3/cms": {
-      "cms-package-dir": "{$vendor-dir}/typo3/cms"
+      "cms-package-dir": "{$vendor-dir}/typo3/cms",
+      "web-dir": ".Build/public"
     }
   }
 }
