@@ -1,4 +1,5 @@
-<?php namespace Konafets\Typo3Debugbar\DataCollectors;
+<?php
+namespace Konafets\Typo3Debugbar\DataCollectors;
 
 use DebugBar\DataCollector\AssetProvider;
 use DebugBar\DataCollector\DataCollectorInterface;
@@ -11,12 +12,10 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 /**
  * Class MySqliCollector
  *
- * @package Konafets\Typo3Debugbar\DataCollectors
  * @author Stefano Kowalke <info@arroba-it.de>
  */
 class MySqliCollector extends BaseCollector implements DataCollectorInterface, Renderable, AssetProvider
 {
-
     const DEFAULT_CONNECTION = 'Default';
 
     /** @var bool */
@@ -84,7 +83,7 @@ class MySqliCollector extends BaseCollector implements DataCollectorInterface, R
      *
      * @return array Collected data
      */
-    function collect()
+    public function collect()
     {
         $totalTime = 0;
         $queries = $this->sqlLogger->queries;
@@ -123,7 +122,7 @@ class MySqliCollector extends BaseCollector implements DataCollectorInterface, R
      *
      * @return string
      */
-    function getName()
+    public function getName()
     {
         return 'mysqli';
     }
@@ -134,7 +133,7 @@ class MySqliCollector extends BaseCollector implements DataCollectorInterface, R
      *
      * @return array
      */
-    function getWidgets()
+    public function getWidgets()
     {
         return [
             'database' => [
@@ -201,7 +200,7 @@ class MySqliCollector extends BaseCollector implements DataCollectorInterface, R
      *
      * @return array
      */
-    function getAssets()
+    public function getAssets()
     {
         return [
             'css' => 'widgets/sqlqueries/widget.css',
