@@ -2,7 +2,6 @@
 namespace Konafets\Typo3Debugbar\Composer;
 
 use Composer\Script\Event;
-use Composer\Semver\Constraint\EmptyConstraint;
 use Symfony\Component\Console\Exception\RuntimeException;
 
 /**
