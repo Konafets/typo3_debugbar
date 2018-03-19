@@ -1,4 +1,5 @@
-<?php namespace Konafets\Typo3Debugbar;
+<?php
+namespace Konafets\Typo3Debugbar;
 
 use Doctrine\DBAL\Logging\DebugStack;
 use Konafets\Typo3Debugbar\DataCollectors\MySqliCollector;
@@ -8,7 +9,6 @@ use TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController;
 
 class Typo3DebugBarServiceProvider
 {
-
     public function register(array $params)
     {
         GeneralUtility::setSingletonInstance(
