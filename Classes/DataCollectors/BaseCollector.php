@@ -12,7 +12,6 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
  */
 abstract class BaseCollector extends DataCollector implements Renderable
 {
-
     /**
      * The constructor
      */
@@ -54,6 +53,7 @@ abstract class BaseCollector extends DataCollector implements Renderable
         if ($convertWithHtmlspecialchars) {
             $labelStr = htmlspecialchars($labelStr);
         }
+
         return $labelStr;
     }
 
