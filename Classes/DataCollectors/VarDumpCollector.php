@@ -1,4 +1,5 @@
-<?php namespace Konafets\Typo3Debugbar\DataCollectors;
+<?php
+namespace Konafets\Typo3Debugbar\DataCollectors;
 
 use DebugBar\DataCollector\DataCollectorInterface;
 use DebugBar\DataCollector\MessagesCollector;
@@ -10,12 +11,10 @@ use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 /**
  * Class VarDumpCollector
  *
- * @package Konafets\Typo3Debugbar\DataCollectors
  * @author Stefano Kowalke <info@arroba-it.de>
  */
 class VarDumpCollector extends MessagesCollector implements DataCollectorInterface, Renderable
 {
-
     protected $varDumpItem = [];
 
     /**
@@ -28,13 +27,12 @@ class VarDumpCollector extends MessagesCollector implements DataCollectorInterfa
         parent::__construct($name);
     }
 
-
     /**
      * Called by the DebugBar when data needs to be collected
      *
      * @return array Collected data
      */
-    function collect()
+    public function collect()
     {
         return $this->getVarDumpItems();
     }
@@ -44,12 +42,12 @@ class VarDumpCollector extends MessagesCollector implements DataCollectorInterfa
      *
      * @return string
      */
-    function getName()
+    public function getName()
     {
         return 'vardump';
     }
 
-    function addVarDump($item)
+    public function addVarDump($item)
     {
         $this->varDumpItem[] = $item;
     }
@@ -65,7 +63,7 @@ class VarDumpCollector extends MessagesCollector implements DataCollectorInterfa
      *
      * @return array
      */
-    function getWidgets()
+    public function getWidgets()
     {
         return [
             'vardump' => [
@@ -75,7 +73,7 @@ class VarDumpCollector extends MessagesCollector implements DataCollectorInterfa
             ],
         ];
     }
-    
+
     /**
      * Returns an array with the following keys:
      *  - base_path
