@@ -2,7 +2,7 @@
 TYPO3 Debug Bar
 ===============
 
-|Latest Stable Version| |Total Downloads| |Latest Unstable Version|
+|Build Status| |Latest Stable Version| |Total Downloads| |Latest Unstable Version|
 |License|
 
 This is a package to integrate `PHP Debug
@@ -182,7 +182,8 @@ Debugbar <https://github.com/barryvdh/laravel-debugbar>`__. Thanks for
 your good work `Barry vd. Heuvel <https://github.com/barryvdh>`__. I
 also copied the idea of a ServiceProvider from Laravel.
 
-
+.. |Build Status| image:: https://travis-ci.org/Konafets/typo3_debugbar.svg?branch=master
+   :target: https://travis-ci.org/Konafets/typo3_debugbar
 .. |Latest Stable Version| image:: https://poser.pugx.org/konafets/typo3_debugbar/v/stable
    :target: https://packagist.org/packages/konafets/typo3_debugbar
 .. |Total Downloads| image:: https://poser.pugx.org/konafets/typo3_debugbar/downloads
