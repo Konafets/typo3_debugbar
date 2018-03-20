@@ -46,10 +46,10 @@ class Typo3DebugBar extends DebugBar implements SingletonInterface
     /** @var array */
     protected $extensionConfiguration;
 
-    /** @var boolean */
+    /** @var bool */
     protected $booted = false;
 
-    /** @var null|boolean */
+    /** @var null|bool */
     protected $enabled = null;
 
     /** @var FrontendBackendUserAuthentication */
