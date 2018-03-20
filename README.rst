@@ -75,7 +75,7 @@ can get the same instance via ``debugbar()``. This opens the
 possibility to interact with the DebugBar from within TYPO3.
 
 Log Exceptions
---------------
+^^^^^^^^^^^^^
 
 .. code:: php
 
@@ -155,13 +155,24 @@ and its unclear if the DebugBar is enabled or not. Classical
 *Chicken-and-egg* problem.
 
 VarDump
---------
+-------
 
 Everybody knows the output of DebugUtility::var_dump() ... and everybody knows that it breaks the layout. Lets move the output
 to the TYPO3 Debugbar. Use ``Konafets\Typo3Debugbar\Overrides\DebuggerUtility::var_dump($variable)`` and get an output like this:
 
 .. figure:: https://raw.githubusercontent.com/konafets/typo3_debugbar/develop/Documentation/Images/VarDumpPane.png
    :alt: VarDumpPane
+
+ViewHelper
+----------
+
+The extension comes with a ViewHelper included to pipe the content of a variable to the DebugBar.
+
+.. code:: html
+
+    {namespace k=Konafets\Typo3Debugbar\ViewHelpers}
+
+    <k:debugbar>{teaser}</k:debugbar>
 
 *********
 Lifecycle
@@ -181,6 +192,8 @@ The extension is heavily inspired by the `Laravel
 Debugbar <https://github.com/barryvdh/laravel-debugbar>`__. Thanks for
 your good work `Barry vd. Heuvel <https://github.com/barryvdh>`__. I
 also copied the idea of a ServiceProvider from Laravel.
+
+The idea and the initial version of the ViewHelper was provided by @KaffDaddy.
 
 .. |Build Status| image:: https://travis-ci.org/Konafets/typo3_debugbar.svg?branch=master
    :target: https://travis-ci.org/Konafets/typo3_debugbar
