@@ -9,7 +9,6 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
  */
 class InfoCollector extends BaseCollector
 {
-
     /**
      * Called by the DebugBar when data needs to be collected
      *
