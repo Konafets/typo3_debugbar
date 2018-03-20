@@ -11,7 +11,6 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 /**
  * Class MySqliCollector
  *
- * @package Konafets\Typo3Debugbar\DataCollectors
  * @author Stefano Kowalke <info@arroba-it.de>
  */
 class MySqliCollector extends BaseCollector implements DataCollectorInterface, Renderable, AssetProvider

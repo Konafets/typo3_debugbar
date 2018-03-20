@@ -7,7 +7,6 @@ use TYPO3\CMS\Core\Utility\VersionNumberUtility;
 /**
  * Class EnvironmentCollector
  *
- * @package Konafets\Typo3Debugbar\DataCollectors
  * @author Stefano Kowalke <info@arroba-it.de>
  */
 class Typo3Collector extends BaseCollector implements DataCollectorInterface, Renderable

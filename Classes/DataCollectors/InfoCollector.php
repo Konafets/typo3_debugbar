@@ -5,7 +5,6 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 /**
  * Class InfoCollector
  *
- * @package Konafets\Typo3Debugbar\DataCollectors
  * @author Stefano Kowalke <info@arroba-it.de>
  */
 class InfoCollector extends BaseCollector

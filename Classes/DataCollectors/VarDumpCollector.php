@@ -10,7 +10,6 @@ use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 /**
  * Class VarDumpCollector
  *
- * @package Konafets\Typo3Debugbar\DataCollectors
  * @author Stefano Kowalke <info@arroba-it.de>
  */
 class VarDumpCollector extends MessagesCollector implements DataCollectorInterface, Renderable

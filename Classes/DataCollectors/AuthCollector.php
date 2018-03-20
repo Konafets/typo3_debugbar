@@ -6,7 +6,6 @@ use DebugBar\DataCollector\Renderable;
 /**
  * Class AuthCollector
  *
- * @package Konafets\Typo3Debugbar\DataCollectors
  * @author Stefano Kowalke <info@arroba-it.de>
  */
 class AuthCollector extends BaseCollector implements DataCollectorInterface, Renderable

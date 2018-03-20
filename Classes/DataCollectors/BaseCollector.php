@@ -8,7 +8,6 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 /**
  * Class BaseCollector
  *
- * @package Konafets\Typo3Debugbar\DataCollectors
  * @author Stefano Kowalke <info@arroba-it.de>
  */
 abstract class BaseCollector extends DataCollector implements Renderable
