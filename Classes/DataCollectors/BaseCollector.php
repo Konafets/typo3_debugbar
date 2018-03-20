@@ -90,5 +90,4 @@ abstract class BaseCollector extends DataCollector implements Renderable
         // Exception for preview
         return !$val ? true : $returnValue;
     }
-
 }

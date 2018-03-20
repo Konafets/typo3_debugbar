@@ -24,5 +24,4 @@ class DebuggerUtility extends BaseDebuggerUtility
         $debugBar = GeneralUtility::makeInstance(Typo3DebugBar::class);
         $debugBar->var_dump($debugString);
     }
-
 }

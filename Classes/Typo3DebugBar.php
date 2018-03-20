@@ -356,7 +356,7 @@ class Typo3DebugBar extends DebugBar implements SingletonInterface
     {
         $messageLevels = ['emergency', 'alert', 'critical', 'error', 'warning', 'notice', 'info', 'debug', 'log'];
         if (in_array($method, $messageLevels)) {
-            foreach($args as $arg) {
+            foreach ($args as $arg) {
                 $this->addMessage($arg, $method);
             }
         }
