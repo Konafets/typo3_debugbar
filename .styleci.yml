@@ -7,7 +7,6 @@ enabled:
   - concat_with_spaces
   - function_typehint_space
   - hash_to_slash_comment
-  - linebreak_after_opening_tag
   - lowercase_cast
   - method_separation
   - native_function_casing
