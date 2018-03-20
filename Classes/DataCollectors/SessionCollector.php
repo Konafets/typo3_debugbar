@@ -45,7 +45,7 @@ class SessionCollector extends DataCollector implements DataCollectorInterface, 
                 'icon' => 'archive',
                 'widget' => 'PhpDebugBar.Widgets.VariableListWidget',
                 'map' => 'session',
-                "default" => '[]',
+                'default' => '[]',
             ],
         ];
     }

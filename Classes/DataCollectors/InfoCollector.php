@@ -79,7 +79,7 @@ class InfoCollector extends BaseCollector
                 'icon' => 'info',
                 'widget' => 'PhpDebugBar.Widgets.VariableListWidget',
                 'map' => 'info',
-                "default" => '[]',
+                'default' => '[]',
             ],
         ];
     }
