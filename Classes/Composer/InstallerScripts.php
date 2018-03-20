@@ -7,7 +7,7 @@ use Symfony\Component\Console\Exception\RuntimeException;
 /**
  * Scripts executed on composer build time
  *
- * This file is taken from helhum/typo3_console. Thanks!
+ * This file is taken from helhum/typo3_console. Thanks Helmut!
  */
 class InstallerScripts
 {
