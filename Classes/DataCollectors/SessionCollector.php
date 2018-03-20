@@ -9,7 +9,6 @@ use DebugBar\DataCollector\Renderable;
  */
 class SessionCollector extends DataCollector implements DataCollectorInterface, Renderable
 {
-
     /**
      * Called by the DebugBar when data needs to be collected
      *

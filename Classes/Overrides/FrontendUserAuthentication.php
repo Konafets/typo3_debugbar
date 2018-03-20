@@ -4,7 +4,6 @@ use TYPO3\CMS\Frontend\Authentication\FrontendUserAuthentication as BaseFrontend
 
 class FrontendUserAuthentication extends BaseFrontendUserAuthentication
 {
-
     public function getSession()
     {
         return $this->sessionData;
