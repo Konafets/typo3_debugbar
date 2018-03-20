@@ -11,7 +11,6 @@ use TYPO3\CMS\Core\Utility\VersionNumberUtility;
  */
 class Typo3Collector extends BaseCollector implements DataCollectorInterface, Renderable
 {
-
     /**
      * Called by the DebugBar when data needs to be collected
      *
