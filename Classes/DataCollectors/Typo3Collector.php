@@ -17,7 +17,7 @@ class Typo3Collector extends BaseCollector implements DataCollectorInterface, Re
      *
      * @return array Collected data
      */
-    function collect()
+    public function collect()
     {
         return [
             'version' => VersionNumberUtility::getCurrentTypo3Version(),
@@ -31,7 +31,7 @@ class Typo3Collector extends BaseCollector implements DataCollectorInterface, Re
      *
      * @return string
      */
-    function getName()
+    public function getName()
     {
         return 'typo3';
     }
@@ -42,7 +42,7 @@ class Typo3Collector extends BaseCollector implements DataCollectorInterface, Re
      *
      * @return array
      */
-    function getWidgets()
+    public function getWidgets()
     {
         return [
             'version' => [

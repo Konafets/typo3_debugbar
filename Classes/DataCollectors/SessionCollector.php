@@ -15,7 +15,7 @@ class SessionCollector extends DataCollector implements DataCollectorInterface, 
      *
      * @return array Collected data
      */
-    function collect()
+    public function collect()
     {
         return $this->getSession();
     }
@@ -25,7 +25,7 @@ class SessionCollector extends DataCollector implements DataCollectorInterface, 
      *
      * @return string
      */
-    function getName()
+    public function getName()
     {
         return 'session';
     }
@@ -36,7 +36,7 @@ class SessionCollector extends DataCollector implements DataCollectorInterface, 
      *
      * @return array
      */
-    function getWidgets()
+    public function getWidgets()
     {
         $name = $this->getName();
 

@@ -15,7 +15,7 @@ class InfoCollector extends BaseCollector
      *
      * @return array Collected data
      */
-    function collect()
+    public function collect()
     {
         $output = [];
         $frontendController = $this->getTypoScriptFrontendController();
@@ -59,7 +59,7 @@ class InfoCollector extends BaseCollector
      *
      * @return string
      */
-    function getName()
+    public function getName()
     {
         return 'info';
     }
@@ -70,7 +70,7 @@ class InfoCollector extends BaseCollector
      *
      * @return array
      */
-    function getWidgets()
+    public function getWidgets()
     {
         $name = $this->getName();
 

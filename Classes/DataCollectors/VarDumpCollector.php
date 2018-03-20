@@ -33,7 +33,7 @@ class VarDumpCollector extends MessagesCollector implements DataCollectorInterfa
      *
      * @return array Collected data
      */
-    function collect()
+    public function collect()
     {
         return $this->getVarDumpItems();
     }
@@ -43,12 +43,12 @@ class VarDumpCollector extends MessagesCollector implements DataCollectorInterfa
      *
      * @return string
      */
-    function getName()
+    public function getName()
     {
         return 'vardump';
     }
 
-    function addVarDump($item)
+    public function addVarDump($item)
     {
         $this->varDumpItem[] = $item;
     }
@@ -64,7 +64,7 @@ class VarDumpCollector extends MessagesCollector implements DataCollectorInterfa
      *
      * @return array
      */
-    function getWidgets()
+    public function getWidgets()
     {
         return [
             'vardump' => [

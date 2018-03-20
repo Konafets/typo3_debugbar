@@ -16,7 +16,7 @@ class AuthCollector extends BaseCollector implements DataCollectorInterface, Ren
      *
      * @return string Collected data
      */
-    function collect()
+    public function collect()
     {
         return $this->getUserInformation();
     }
@@ -26,7 +26,7 @@ class AuthCollector extends BaseCollector implements DataCollectorInterface, Ren
      *
      * @return string
      */
-    function getName()
+    public function getName()
     {
         return 'auth';
     }
@@ -37,7 +37,7 @@ class AuthCollector extends BaseCollector implements DataCollectorInterface, Ren
      *
      * @return array
      */
-    function getWidgets()
+    public function getWidgets()
     {
         $name = $this->getName();
 

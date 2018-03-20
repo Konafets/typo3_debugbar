@@ -83,7 +83,7 @@ class MySqliCollector extends BaseCollector implements DataCollectorInterface, R
      *
      * @return array Collected data
      */
-    function collect()
+    public function collect()
     {
         $totalTime = 0;
         $queries = $this->sqlLogger->queries;
@@ -122,7 +122,7 @@ class MySqliCollector extends BaseCollector implements DataCollectorInterface, R
      *
      * @return string
      */
-    function getName()
+    public function getName()
     {
         return 'mysqli';
     }
@@ -133,7 +133,7 @@ class MySqliCollector extends BaseCollector implements DataCollectorInterface, R
      *
      * @return array
      */
-    function getWidgets()
+    public function getWidgets()
     {
         return [
             'database' => [
@@ -200,7 +200,7 @@ class MySqliCollector extends BaseCollector implements DataCollectorInterface, R
      *
      * @return array
      */
-    function getAssets()
+    public function getAssets()
     {
         return [
             'css' => 'widgets/sqlqueries/widget.css',
