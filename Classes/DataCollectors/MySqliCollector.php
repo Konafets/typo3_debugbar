@@ -63,7 +63,6 @@ class MySqliCollector extends BaseCollector implements DataCollectorInterface, R
      * Renders the SQL of traced statements with params embeded
      *
      * @param bool $enabled
-     * @param string $quotationChar
      */
     public function setRenderSqlWithParams($enabled = true)
     {
