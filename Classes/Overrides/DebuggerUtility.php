@@ -1,4 +1,5 @@
-<?php namespace Konafets\Typo3Debugbar\Overrides;
+<?php
+namespace Konafets\Typo3Debugbar\Overrides;
 
 use Konafets\Typo3Debugbar\Typo3DebugBar;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
@@ -6,7 +7,6 @@ use TYPO3\CMS\Extbase\Utility\DebuggerUtility as BaseDebuggerUtility;
 
 class DebuggerUtility extends BaseDebuggerUtility
 {
-
     public static function var_dump(
         $variable,
         $title = null,

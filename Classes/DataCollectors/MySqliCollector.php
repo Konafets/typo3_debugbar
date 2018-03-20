@@ -1,4 +1,5 @@
-<?php namespace Konafets\Typo3Debugbar\DataCollectors;
+<?php
+namespace Konafets\Typo3Debugbar\DataCollectors;
 
 use DebugBar\DataCollector\AssetProvider;
 use DebugBar\DataCollector\DataCollectorInterface;
@@ -15,7 +16,6 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
  */
 class MySqliCollector extends BaseCollector implements DataCollectorInterface, Renderable, AssetProvider
 {
-
     const DEFAULT_CONNECTION = 'Default';
 
     /** @var bool */

@@ -1,4 +1,5 @@
-<?php namespace Konafets\Typo3Debugbar\DataCollectors;
+<?php
+namespace Konafets\Typo3Debugbar\DataCollectors;
 
 use DebugBar\DataCollector\DataCollectorInterface;
 use DebugBar\DataCollector\Renderable;
@@ -10,7 +11,6 @@ use DebugBar\DataCollector\Renderable;
  */
 class AuthCollector extends BaseCollector implements DataCollectorInterface, Renderable
 {
-
     /**
      * Called by the DebugBar when data needs to be collected
      *

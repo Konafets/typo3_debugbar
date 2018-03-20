@@ -1,4 +1,5 @@
-<?php namespace Konafets\Typo3Debugbar;
+<?php
+namespace Konafets\Typo3Debugbar;
 
 use DebugBar\DataCollector\ExceptionsCollector;
 use DebugBar\DataCollector\MemoryCollector;
@@ -37,7 +38,6 @@ use TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController;
  */
 class Typo3DebugBar extends DebugBar implements SingletonInterface
 {
-
     const EXTENSION_KEY = 'typo3_debugbar';
 
     /** @var ObjectManager */
@@ -46,10 +46,10 @@ class Typo3DebugBar extends DebugBar implements SingletonInterface
     /** @var array */
     protected $extensionConfiguration;
 
-    /** @var boolean */
+    /** @var bool */
     protected $booted = false;
 
-    /** @var null|boolean */
+    /** @var null|bool */
     protected $enabled = null;
 
     /** @var FrontendBackendUserAuthentication */
@@ -349,8 +349,8 @@ class Typo3DebugBar extends DebugBar implements SingletonInterface
      *
      * @param string $method
      * @param array $args
-     * @return mixed|void
      * @throws DebugBarException
+     * @return mixed|void
      */
     public function __call($method, $args)
     {

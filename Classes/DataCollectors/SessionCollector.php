@@ -1,4 +1,5 @@
-<?php namespace Konafets\Typo3Debugbar\DataCollectors;
+<?php
+namespace Konafets\Typo3Debugbar\DataCollectors;
 
 use DebugBar\DataCollector\DataCollector;
 use DebugBar\DataCollector\DataCollectorInterface;
@@ -9,7 +10,6 @@ use DebugBar\DataCollector\Renderable;
  */
 class SessionCollector extends DataCollector implements DataCollectorInterface, Renderable
 {
-
     /**
      * Called by the DebugBar when data needs to be collected
      *
@@ -45,7 +45,7 @@ class SessionCollector extends DataCollector implements DataCollectorInterface, 
                 'icon' => 'archive',
                 'widget' => 'PhpDebugBar.Widgets.VariableListWidget',
                 'map' => 'session',
-                "default" => '[]',
+                'default' => '[]',
             ],
         ];
     }

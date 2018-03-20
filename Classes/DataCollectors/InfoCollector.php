@@ -1,4 +1,5 @@
-<?php namespace Konafets\Typo3Debugbar\DataCollectors;
+<?php
+namespace Konafets\Typo3Debugbar\DataCollectors;
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
@@ -9,7 +10,6 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
  */
 class InfoCollector extends BaseCollector
 {
-
     /**
      * Called by the DebugBar when data needs to be collected
      *
@@ -79,7 +79,7 @@ class InfoCollector extends BaseCollector
                 'icon' => 'info',
                 'widget' => 'PhpDebugBar.Widgets.VariableListWidget',
                 'map' => 'info',
-                "default" => '[]',
+                'default' => '[]',
             ],
         ];
     }

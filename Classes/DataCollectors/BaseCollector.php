@@ -1,4 +1,5 @@
-<?php namespace Konafets\Typo3Debugbar\DataCollectors;
+<?php
+namespace Konafets\Typo3Debugbar\DataCollectors;
 
 use DebugBar\DataCollector\DataCollector;
 use DebugBar\DataCollector\Renderable;
@@ -12,7 +13,6 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
  */
 abstract class BaseCollector extends DataCollector implements Renderable
 {
-
     /**
      * The constructor
      */
@@ -54,6 +54,7 @@ abstract class BaseCollector extends DataCollector implements Renderable
         if ($convertWithHtmlspecialchars) {
             $labelStr = htmlspecialchars($labelStr);
         }
+
         return $labelStr;
     }
 
