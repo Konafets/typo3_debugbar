@@ -193,7 +193,7 @@ Debugbar <https://github.com/barryvdh/laravel-debugbar>`__. Thanks for
 your good work `Barry vd. Heuvel <https://github.com/barryvdh>`__. I
 also copied the idea of a ServiceProvider from Laravel.
 
-The idea and the initial version of the ViewHelper was provided by @KaffDaddy.
+The idea and the initial version of the ViewHelper was provided by `@KaffDaddy <https://github.com/KaffDaddy>`__.
 
 .. |Build Status| image:: https://travis-ci.org/Konafets/typo3_debugbar.svg?branch=master
    :target: https://travis-ci.org/Konafets/typo3_debugbar
