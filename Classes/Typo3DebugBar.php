@@ -37,7 +37,6 @@ use TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController;
  */
 class Typo3DebugBar extends DebugBar implements SingletonInterface
 {
-
     const EXTENSION_KEY = 'typo3_debugbar';
 
     /** @var ObjectManager */
@@ -349,8 +348,8 @@ class Typo3DebugBar extends DebugBar implements SingletonInterface
      *
      * @param string $method
      * @param array $args
-     * @return mixed|void
      * @throws DebugBarException
+     * @return mixed|void
      */
     public function __call($method, $args)
     {

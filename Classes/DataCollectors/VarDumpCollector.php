@@ -14,7 +14,6 @@ use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
  */
 class VarDumpCollector extends MessagesCollector implements DataCollectorInterface, Renderable
 {
-
     protected $varDumpItem = [];
 
     /**
@@ -26,7 +25,6 @@ class VarDumpCollector extends MessagesCollector implements DataCollectorInterfa
     {
         parent::__construct($name);
     }
-
 
     /**
      * Called by the DebugBar when data needs to be collected
@@ -74,7 +72,7 @@ class VarDumpCollector extends MessagesCollector implements DataCollectorInterfa
             ],
         ];
     }
-    
+
     /**
      * Returns an array with the following keys:
      *  - base_path
