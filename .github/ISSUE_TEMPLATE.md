@@ -1,7 +1,7 @@
 ### Type of TYPO3 installation 
 
 - [ ] Classic
-- [ ] Commposer
+- [ ] Composer
 
 ### Expected behavior
 
