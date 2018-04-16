@@ -10,7 +10,6 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
  */
 class TimeTracker extends BaseTimeTracker
 {
-
     /**
      * Print TypoScript parsing log
      *
