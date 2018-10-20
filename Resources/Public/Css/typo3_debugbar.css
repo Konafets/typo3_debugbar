@@ -31,6 +31,10 @@ div.phpdebugbar code, div.phpdebugbar pre {
     color: #000;
 }
 
+.extbase-debugger code, .extbase-debugger pre {
+    color : #fff !important;
+}
+
 div.phpdebugbar pre.sf-dump {
     color: #a0a000;
     outline: 0;
