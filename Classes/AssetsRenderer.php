@@ -6,7 +6,6 @@ use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
 class AssetsRenderer extends JavascriptRenderer
 {
-
     const PATH_TO_STYLES = 'Resources/Public/Css';
     const PATH_TO_JAVASCRIPT = 'Resources/Public/JavaScript';
     const CUSTOM_CSS_STYLE_FILENAME = '/typo3_debugbar.css';

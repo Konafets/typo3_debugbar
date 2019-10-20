@@ -6,7 +6,6 @@ use TYPO3\CMS\Extbase\Utility\DebuggerUtility as BaseDebuggerUtility;
 
 class DebuggerUtility extends BaseDebuggerUtility
 {
-
     public static function var_dump(
         $variable,
         $title = null,
