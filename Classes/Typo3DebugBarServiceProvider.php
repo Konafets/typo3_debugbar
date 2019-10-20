@@ -8,7 +8,6 @@ use TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController;
 
 class Typo3DebugBarServiceProvider
 {
-
     public function register(array $params)
     {
         GeneralUtility::setSingletonInstance(

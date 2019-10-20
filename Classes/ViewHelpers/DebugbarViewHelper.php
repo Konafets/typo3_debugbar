@@ -14,7 +14,7 @@ class DebugbarViewHelper extends AbstractViewHelper
      */
     public function render($content = null)
     {
-        if(is_null($content)) {
+        if (is_null($content)) {
             $content = $this->renderChildren();
         }
 
@@ -23,7 +23,5 @@ class DebugbarViewHelper extends AbstractViewHelper
         if ($debugBar->isEnabled()) {
             DebuggerUtility::var_dump($content);
         }
-
-        return;
     }
 }
